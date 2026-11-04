@@ -252,6 +252,17 @@ button{font:inherit;color:inherit;cursor:pointer}
 #dots button{width:14px;height:14px;padding:0;border-radius:50%;border:2px solid currentColor;background:transparent}
 #dots button[aria-current="true"]{background:currentColor}
 #gl{position:fixed;inset:0;width:100%;height:100%;z-index:1;pointer-events:none}
+@media(max-width:768px){
+  #gl{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100vh;
+    height:100svh;
+    min-height:560px;
+  }
+}
 
 /* Curved Divider between Hero and Product Showcase */
 .hero-curve-divider{position:relative;width:100%;height:clamp(45px,6vw,95px);background:#ffffff;margin-top:-1px;z-index:2;overflow:hidden}
@@ -1533,8 +1544,15 @@ function init(){
       m.rotation.z=o*.03;
       m.scale.setScalar(Math.max(.01,1-.14*ao));
     });
-    const p=Math.min(scrollY/innerHeight,1);
-    cv.style.opacity=Math.max(0,1-p*1.4);cv.style.transform='translateY('+(-p*18)+'vh)';
+    const isMobile = window.matchMedia('(max-width: 768px)').matches;
+    if(isMobile){
+      cv.style.opacity = '1';
+      cv.style.transform = 'none';
+    } else {
+      const p = Math.min(scrollY / innerHeight, 1);
+      cv.style.opacity = Math.max(0, 1 - p * 1.4);
+      cv.style.transform = 'translateY(' + (-p * 18) + 'vh)';
+    }
     R.render(scene,cam);
   }
   frame();

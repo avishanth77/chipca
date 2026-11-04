@@ -602,3 +602,42 @@ The packet textures are configured in JavaScript inside [`hero.html`](file:///d:
    - Set up `exp` as the active development branch.
 2. **Pushed Branch to Remote:**
    - Pushed branch `exp` to GitHub (`https://github.com/avishanth77/chipca/tree/exp`) and set upstream tracking (`origin/exp`).
+
+
+---
+
+### Turn 21
+
+**User:**
+> now in our site the in mobile screen the packet opacity decrease while scrolling the website remove that and move the packet along with the background only apply this only in moabile screen
+
+**Assistant:**
+#### Changes Made:
+1. **Prevented Opacity Decrease on Mobile Screens:**
+   - In `frame()`, detected mobile screen using `window.matchMedia('(max-width: 768px)').matches`.
+   - On mobile screens, locked canvas opacity to full 100% (`cv.style.opacity = '1'`), completely removing the scroll-fade effect.
+   - On desktop screens (`> 768px`), preserved existing smooth parallax and fade (`cv.style.opacity = Math.max(0, 1 - p * 1.4)`).
+
+2. **Synchronized Packet Movement with Background (Mobile Screen Only):**
+   - Added responsive CSS:
+     ```css
+     @media(max-width:768px){
+       #gl{
+         position:absolute;
+         top:0;
+         left:0;
+         width:100%;
+         height:100vh;
+         height:100svh;
+         min-height:560px;
+       }
+     }
+     ```
+   - In JS on mobile, set `cv.style.transform = 'none'` so the canvas remains physically positioned inside the hero section viewport and scrolls up naturally in 1:1 lockstep with the hero background and `#name` headline.
+   - Once the user scrolls past the hero section, the curved divider (`.hero-curve-divider`, `z-index: 2`) and Product Showcase (`#showcase`, `z-index: 2`) smoothly roll over the packet.
+
+3. **Files Updated:**
+   - [`hero.html`](file:///d:/botany/chipico/CHIPCA%20SITE/hero.html)
+   - [`Chipca site 1.html`](file:///d:/botany/chipico/CHIPCA%20SITE/Chipca%20site%201.html)
+   - [`index.html`](file:///d:/botany/chipico/CHIPCA%20SITE/index.html)
+   - [`CHAT_HISTORY.md`](file:///d:/botany/chipico/CHIPCA%20SITE/CHAT_HISTORY.md)
