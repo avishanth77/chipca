@@ -906,72 +906,54 @@ button{font:inherit;color:inherit;cursor:pointer}
 }
 .footer-body{
   background:#27160c;
-  padding:20px clamp(20px, 5.5vw, 80px) 28px;
+  padding:20px clamp(20px, 6vw, 90px) 32px;
 }
 .footer-container{
-  max-width:1280px;
+  max-width:1200px;
   margin:0 auto;
-  display:grid;
-  grid-template-columns:1.4fr 0.9fr 0.9fr 1.6fr;
-  gap:clamp(20px, 3.5vw, 52px);
-  align-items:start;
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+  gap:clamp(32px, 6vw, 80px);
+  flex-wrap:wrap;
 }
 /* Column 1: Brand & Socials */
 .footer-col-brand{
-  border-right:1px solid rgba(255,255,255,0.12);
-  padding-right:clamp(16px, 2.5vw, 36px);
+  max-width:440px;
 }
-.footer-logo{
-  display:inline-flex;
-  flex-direction:column;
-  align-items:flex-start;
-  margin-bottom:14px;
+.footer-logo-link{
+  display:inline-block;
+  text-decoration:none;
 }
-.footer-logo-wrap{
-  display:inline-flex;
-  align-items:flex-start;
-  position:relative;
-}
-.footer-logo-text{
-  font-family:'Pacifico',cursive;
-  font-size:2.25rem;
-  line-height:1.05;
-  color:#ffffff;
-  letter-spacing:-.01em;
-}
-.footer-logo-reg{
-  font-family:'Instrument Sans',sans-serif;
-  font-size:.78rem;
-  color:#ffffff;
-  opacity:.85;
-  margin-left:3px;
-  margin-top:2px;
-}
-.footer-logo-swoosh{
-  width:98px;
-  height:12px;
-  margin-top:-4px;
-  margin-left:14px;
+.footer-brand-img{
+  width:clamp(140px, 15vw, 185px);
+  height:auto;
   display:block;
+  margin-bottom:14px;
+  filter:drop-shadow(0 4px 12px rgba(0,0,0,0.22));
+  transition:transform .25s ease;
+}
+.footer-brand-img:hover{
+  transform:scale(1.03);
 }
 .footer-tagline{
   font-family:'Poppins',sans-serif;
-  font-size:.84rem;
+  font-size:.86rem;
   font-weight:400;
   line-height:1.55;
   color:#cbbdb0;
   margin:0 0 18px 0;
-  max-width:260px;
+  max-width:320px;
 }
 .footer-socials{
   display:flex;
   align-items:center;
-  gap:9px;
+  gap:10px;
 }
 .footer-social-btn{
-  width:34px;
-  height:34px;
-  border-radius:7px;
+  width:36px;
+  height:36px;
+  border-radius:8px;
   border:1px solid rgba(255,255,255,0.22);
   display:inline-flex;
   align-items:center;
@@ -989,10 +971,13 @@ button{font:inherit;color:inherit;cursor:pointer}
   box-shadow:0 4px 12px rgba(234,124,30,0.25);
 }
 
-/* Columns 2 & 3: Links */
+/* Column 2: Quick Links */
+.footer-col-links{
+  min-width:180px;
+}
 .footer-col-title{
   font-family:'Poppins',sans-serif;
-  font-size:.95rem;
+  font-size:.98rem;
   font-weight:600;
   color:#ffffff;
   margin:0 0 16px 0;
@@ -1004,11 +989,11 @@ button{font:inherit;color:inherit;cursor:pointer}
   margin:0;
   display:flex;
   flex-direction:column;
-  gap:10px;
+  gap:11px;
 }
 .footer-links-list a{
   font-family:'Poppins',sans-serif;
-  font-size:.86rem;
+  font-size:.88rem;
   font-weight:400;
   color:#cbbdb0;
   text-decoration:none;
@@ -1017,91 +1002,13 @@ button{font:inherit;color:inherit;cursor:pointer}
 }
 .footer-links-list a:hover{
   color:#ea7c1e;
-  transform:translateX(3px);
-}
-
-/* Column 4: Newsletter */
-.footer-col-newsletter{
-  padding-left:clamp(0px, 1.5vw, 16px);
-}
-.footer-newsletter-desc{
-  font-family:'Poppins',sans-serif;
-  font-size:.84rem;
-  font-weight:400;
-  line-height:1.5;
-  color:#cbbdb0;
-  margin:0 0 16px 0;
-  max-width:340px;
-}
-.footer-newsletter-form{
-  background:#faf4e8;
-  border-radius:50px;
-  padding:4px 5px 4px 14px;
-  display:flex;
-  align-items:center;
-  gap:10px;
-  max-width:360px;
-  box-shadow:0 4px 14px rgba(0,0,0,0.18);
-  transition:box-shadow .2s ease,border-color .2s ease;
-  border:1.5px solid transparent;
-}
-.footer-newsletter-form:focus-within{
-  border-color:#ea7c1e;
-  box-shadow:0 6px 20px rgba(234,124,30,0.28);
-}
-.newsletter-icon{
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  color:#d48a3e;
-  flex-shrink:0;
-}
-.newsletter-input{
-  flex:1;
-  min-width:0;
-  background:transparent;
-  border:none;
-  outline:none;
-  font-family:'Poppins',sans-serif;
-  font-size:.86rem;
-  color:#24160c;
-  padding:6px 0;
-}
-.newsletter-input::placeholder{
-  color:#9a8876;
-}
-.newsletter-submit-btn{
-  width:36px;
-  height:36px;
-  border-radius:50%;
-  background:#e85918;
-  border:none;
-  color:#ffffff;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  cursor:pointer;
-  transition:all .25s ease;
-  flex-shrink:0;
-  box-shadow:0 2px 8px rgba(232,89,24,0.35);
-}
-.newsletter-submit-btn:hover{
-  background:#d4490c;
-  transform:scale(1.06);
-  box-shadow:0 4px 14px rgba(232,89,24,0.5);
-}
-.newsletter-msg{
-  font-family:'Poppins',sans-serif;
-  font-size:.8rem;
-  font-weight:500;
-  margin-top:8px;
-  min-height:18px;
+  transform:translateX(4px);
 }
 
 /* Sub-footer Bottom Bar */
 .footer-bottom{
-  max-width:1280px;
-  margin:42px auto 0;
+  max-width:1200px;
+  margin:38px auto 0;
   padding-top:20px;
   border-top:1px solid rgba(255,255,255,0.12);
   display:flex;
@@ -1137,25 +1044,15 @@ button{font:inherit;color:inherit;cursor:pointer}
 }
 
 /* Responsive Footer Adjustments */
-@media(max-width:992px){
-  .footer-container{
-    grid-template-columns:1fr 1fr;
-    gap:36px;
-  }
-  .footer-col-brand{
-    border-right:none;
-    padding-right:0;
-  }
-}
 @media(max-width:640px){
   .footer-container{
-    grid-template-columns:1fr;
-    gap:28px;
+    flex-direction:column;
+    gap:32px;
   }
   .footer-bottom{
     flex-direction:column;
     align-items:flex-start;
-    gap:10px;
+    gap:12px;
   }
   .footer-legal{
     flex-wrap:wrap;
@@ -1289,87 +1186,39 @@ button{font:inherit;color:inherit;cursor:pointer}
     <div class="footer-container">
       <!-- Column 1: Brand & Socials -->
       <div class="footer-col footer-col-brand">
-        <div class="footer-logo">
-          <div class="footer-logo-wrap">
-            <span class="footer-logo-text">Chipca</span>
-            <span class="footer-logo-reg">®</span>
-          </div>
-          <svg class="footer-logo-swoosh" viewBox="0 0 110 14" fill="none" aria-hidden="true">
-            <path d="M4 3 C35 13, 75 13, 106 3" stroke="#ea7c1e" stroke-width="3" stroke-linecap="round"/>
-          </svg>
-        </div>
+        <a href="#hero" class="footer-logo-link" aria-label="Chipca Home">
+          <picture>
+            <source srcset="chipca_logo_white.webp" type="image/webp">
+            <img src="chipca_logo_white.png" alt="Chipca: The Good Bite" class="footer-brand-img" width="185" height="125" loading="lazy">
+          </picture>
+        </a>
         <p class="footer-tagline">Crunchy, flavourful chips inspired by the spirit of Kerala.</p>
         <div class="footer-socials" aria-label="Social Media Links">
           <a href="https://instagram.com" target="_blank" rel="noopener" class="footer-social-btn" aria-label="Instagram">
-            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
               <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
               <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
             </svg>
           </a>
-          <a href="https://youtube.com" target="_blank" rel="noopener" class="footer-social-btn" aria-label="YouTube">
-            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/>
-              <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02" fill="currentColor"/>
-            </svg>
-          </a>
           <a href="https://facebook.com" target="_blank" rel="noopener" class="footer-social-btn" aria-label="Facebook">
-            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
-            </svg>
-          </a>
-          <a href="https://linkedin.com" target="_blank" rel="noopener" class="footer-social-btn" aria-label="LinkedIn">
-            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
-              <rect x="2" y="9" width="4" height="12"/>
-              <circle cx="4" cy="4" r="2"/>
             </svg>
           </a>
         </div>
       </div>
 
       <!-- Column 2: Quick Links -->
-      <div class="footer-col">
+      <div class="footer-col footer-col-links">
         <h4 class="footer-col-title">Quick Links</h4>
         <ul class="footer-links-list">
           <li><a href="#hero">Home</a></li>
           <li><a href="#showcase">Our Flavours</a></li>
-          <li><a href="#craft">About Us</a></li>
-          <li><a href="#shop">Contact</a></li>
+          <li><a href="#craft">Our Craft</a></li>
+          <li><a href="#shop">Shop Online</a></li>
+          <li><a href="https://wa.me/918075555456?text=Hi%20Chipca%20Team%2C%20I%20would%20like%20to%20get%20in%20touch" target="_blank" rel="noopener">Contact on WhatsApp</a></li>
         </ul>
-      </div>
-
-      <!-- Column 3: Support -->
-      <div class="footer-col">
-        <h4 class="footer-col-title">Support</h4>
-        <ul class="footer-links-list">
-          <li><a href="#shop">FAQs</a></li>
-          <li><a href="#shop">Store Locator</a></li>
-          <li><a href="https://wa.me/918075555456?text=Hi%2C%20I%20am%20interested%20in%20Bulk%20Orders%20for%20Chipca%20Chips" target="_blank" rel="noopener">Bulk Orders</a></li>
-          <li><a href="https://wa.me/918075555456?text=Hi%20Chipca%20Team%2C%20I%20would%20like%20to%20get%20in%20touch" target="_blank" rel="noopener">Get in Touch</a></li>
-        </ul>
-      </div>
-
-      <!-- Column 4: Newsletter -->
-      <div class="footer-col footer-col-newsletter">
-        <h4 class="footer-col-title">Newsletter</h4>
-        <p class="footer-newsletter-desc">Get the latest updates, new flavours and special offers.</p>
-        <form class="footer-newsletter-form" id="newsletter-form" onsubmit="handleNewsletter(event)">
-          <span class="newsletter-icon" aria-hidden="true">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#d48a3e" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <rect width="20" height="16" x="2" y="4" rx="2"/>
-              <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
-            </svg>
-          </span>
-          <input type="email" id="newsletter-email" class="newsletter-input" placeholder="Enter your email" required autocomplete="email">
-          <button type="submit" class="newsletter-submit-btn" aria-label="Subscribe to newsletter">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-              <path d="M5 12h14"/>
-              <path d="m12 5 7 7-7 7"/>
-            </svg>
-          </button>
-        </form>
-        <div id="newsletter-msg" class="newsletter-msg" aria-live="polite"></div>
       </div>
     </div>
 
@@ -2176,20 +2025,7 @@ function initNavbar(){
 
 
 
-// Newsletter submission handler
-function handleNewsletter(e){
-  e.preventDefault();
-  const input = document.getElementById('newsletter-email');
-  const msg = document.getElementById('newsletter-msg');
-  if(input && input.value.trim()){
-    if(msg){
-      msg.style.color = '#78c679';
-      msg.textContent = '✓ Thank you for subscribing to Chipca updates!';
-    }
-    input.value = '';
-    setTimeout(() => { if(msg) msg.textContent = ''; }, 4500);
-  }
-}
+
 
 document.fonts.ready.then(()=>{
   initNavbar();

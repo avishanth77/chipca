@@ -641,3 +641,39 @@ The packet textures are configured in JavaScript inside [`hero.html`](file:///d:
    - [`Chipca site 1.html`](file:///d:/botany/chipico/CHIPCA%20SITE/Chipca%20site%201.html)
    - [`index.html`](file:///d:/botany/chipico/CHIPCA%20SITE/index.html)
    - [`CHAT_HISTORY.md`](file:///d:/botany/chipico/CHIPCA%20SITE/CHAT_HISTORY.md)
+
+
+---
+
+### Turn 22
+
+**User:**
+> remove the Newsletter,Support and remove the youtube and linked in icon from the footer and  use the uploded logo
+> *[Attachments: Official Chipca logos in dark brown and white with yellow dot]*
+
+**Assistant:**
+#### Changes Made:
+1. **Added Uploaded Official Brand Logos:**
+   - Saved uploaded logos to workspace: `chipca_logo_white.png` (for dark backgrounds) and `chipca_logo_dark.png` (for light backgrounds).
+   - Generated high-performance WebP variants: `chipca_logo_white.webp` and `chipca_logo_dark.webp`.
+   - Replaced previous script text wordmark in the footer with the official white Chipca logo with yellow dot (`<img src="chipca_logo_white.png" ...>` with `<picture>` WebP source), featuring subtle drop-shadow and smooth hover scale.
+
+2. **Removed Newsletter & Support Sections:**
+   - Removed Newsletter subscription form, icon, inputs, and JavaScript submission handlers.
+   - Removed Support column and its links (FAQs, Store Locator, Bulk Orders, Get in Touch).
+
+3. **Removed YouTube & LinkedIn Icons:**
+   - Trimmed the social media group down to the requested two platforms: **Instagram** and **Facebook**.
+
+4. **Updated Clean 2-Column Footer Layout:**
+   - **Column 1 (Left):** Official white Chipca logo, Kerala brand tagline, and Instagram & Facebook outline buttons.
+   - **Column 2 (Right):** Quick Links (*Home*, *Our Flavours*, *Our Craft*, *Shop Online*, *Contact on WhatsApp*).
+   - Preserved the organic double curved wave divider and bottom copyright/legal bar.
+
+5. **Files Updated & Pushed:**
+   - [`hero.html`](file:///d:/botany/chipico/CHIPCA%20SITE/hero.html)
+   - [`Chipca site 1.html`](file:///d:/botany/chipico/CHIPCA%20SITE/Chipca%20site%201.html)
+   - [`index.html`](file:///d:/botany/chipico/CHIPCA%20SITE/index.html)
+   - [`chipca_logo_white.png`](file:///d:/botany/chipico/CHIPCA%20SITE/chipca_logo_white.png)
+   - [`chipca_logo_dark.png`](file:///d:/botany/chipico/CHIPCA%20SITE/chipca_logo_dark.png)
+   - [`CHAT_HISTORY.md`](file:///d:/botany/chipico/CHIPCA%20SITE/CHAT_HISTORY.md)
