@@ -55,3 +55,4 @@ Open [`index.html`](index.html) or host on GitHub Pages:
 ---
 
 © 2026 Chipca Foods. All rights reserved.
+

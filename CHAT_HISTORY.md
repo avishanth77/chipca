@@ -586,3 +586,19 @@ The packet textures are configured in JavaScript inside [`hero.html`](file:///d:
    - Staged all assets (transparent WebP & PNG packet images, custom benefit icons, scripts, HTML files, documentation).
    - Committed with descriptive release message: `feat: Complete Chipca 3D landing page, showcase, shop & footer`.
    - Pushed cleanly to `https://github.com/avishanth77/chipca` on branch `main`.
+
+
+---
+
+### Turn 20
+
+**User:**
+> make a  new branch named "exp"
+
+**Assistant:**
+#### Actions Taken:
+1. **Created & Switched to Branch `exp`:**
+   - Ran `git checkout -b exp`.
+   - Set up `exp` as the active development branch.
+2. **Pushed Branch to Remote:**
+   - Pushed branch `exp` to GitHub (`https://github.com/avishanth77/chipca/tree/exp`) and set upstream tracking (`origin/exp`).
