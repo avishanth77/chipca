@@ -1,0 +1,12 @@
+# Operating System Files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Scratch / Temp files
+*.tmp
+*.temp
+update_nav_and_swipe.py
+apply_cart_update.py
+add_footer.py
+repair_site.py
