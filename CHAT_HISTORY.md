@@ -677,3 +677,31 @@ The packet textures are configured in JavaScript inside [`hero.html`](file:///d:
    - [`chipca_logo_white.png`](file:///d:/botany/chipico/CHIPCA%20SITE/chipca_logo_white.png)
    - [`chipca_logo_dark.png`](file:///d:/botany/chipico/CHIPCA%20SITE/chipca_logo_dark.png)
    - [`CHAT_HISTORY.md`](file:///d:/botany/chipico/CHIPCA%20SITE/CHAT_HISTORY.md)
+
+
+---
+
+### Turn 23
+
+**User:**
+> remove the dots and arrows in the at bottom of the hero page and also reduce the gap between the chips name and the chips discription only aplly this in mobile screen
+> *[Attachment: Screenshot showing mobile hero section with bottom arrow buttons/dots and large vertical gap between chips name and description]*
+
+**Assistant:**
+#### Changes Made:
+1. **Removed Bottom Arrow Buttons and Dots on Mobile (`.ctl`):**
+   - Added `.ctl { display: none !important; }` in the mobile media query (`@media(max-width: 768px)`).
+   - Removed the bulky floating circles, arrows, and dots from the bottom of the hero section on mobile screens, creating a cleaner visual canvas.
+   - Preserved interactive mobile swipe gestures (touch drag left/right) and auto-rotation for smooth flavor navigation.
+   - On desktop screens (`> 768px`), the navigation controls remain visible and functional.
+
+2. **Reduced Vertical Gap Between Chips Name & Description (Mobile Screen Only):**
+   - Removed the previous mobile offset that pushed `#name` up to `bottom: 24vh`.
+   - Set `#name { bottom: 13.5vh; }` and `.tag { bottom: 8.5vh; }` on mobile.
+   - Reduced the vertical separation between the flavour name and description from ~120px (`15vh`) down to a tight, natural ~28px gap directly above the lower curved divider.
+
+3. **Files Updated & Pushed:**
+   - [`hero.html`](file:///d:/botany/chipico/CHIPCA%20SITE/hero.html)
+   - [`Chipca site 1.html`](file:///d:/botany/chipico/CHIPCA%20SITE/Chipca%20site%201.html)
+   - [`index.html`](file:///d:/botany/chipico/CHIPCA%20SITE/index.html)
+   - [`CHAT_HISTORY.md`](file:///d:/botany/chipico/CHIPCA%20SITE/CHAT_HISTORY.md)
