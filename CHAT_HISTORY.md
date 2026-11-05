@@ -705,3 +705,41 @@ The packet textures are configured in JavaScript inside [`hero.html`](file:///d:
    - [`Chipca site 1.html`](file:///d:/botany/chipico/CHIPCA%20SITE/Chipca%20site%201.html)
    - [`index.html`](file:///d:/botany/chipico/CHIPCA%20SITE/index.html)
    - [`CHAT_HISTORY.md`](file:///d:/botany/chipico/CHIPCA%20SITE/CHAT_HISTORY.md)
+
+
+---
+
+### Turn 24
+
+**User:**
+> i want to add the 3 type of quantity for a product that is 150g,250g,500g add that quantity chage option and while chageing the quantity shouyld change the prize also
+
+**Assistant:**
+#### Changes Made:
+1. **Added 3 Pack Weight Variants & Dynamic Pricing per Product:**
+   - Configured 3 distinct weight variants (`150g`, `250g`, `500g`) for each product in `SHOP_ITEMS`:
+     - **Classic Banana Chips:** 150g: ₹99 | 250g: ₹160 | 500g: ₹310
+     - **Robusta Banana Chips:** 150g: ₹99 | 250g: ₹160 | 500g: ₹310
+     - **Heritage Taro Chips:** 150g: ₹120 | 250g: ₹195 | 500g: ₹380
+     - **Masala Banana Chips:** 150g: ₹110 | 250g: ₹175 | 500g: ₹340
+     - **Single Stick Chips:** 150g: ₹110 | 250g: ₹175 | 500g: ₹340
+   - Updated the craft section description to highlight the new pack sizes: *"Available in fresh 150g, 250g, and 500g packs with the backwaters on the back, and the good bite inside."*
+
+2. **Interactive Pack Size Selector on Product Cards:**
+   - Added `.card-weight-selector` containing 3 interactive pill buttons (`[150g]`, `[250g]`, `[500g]`) above the price row on each product card.
+   - Designed clean pill styling with warm cream background, subtle border, and high-contrast active dark pill state (`#241a0c` background with `#f6ede2` text).
+   - Created `selectProductWeight(prodId, weight)` handler:
+     - Updates the active pill button state.
+     - Dynamically updates the displayed price (`#price-${prodId}`) and pack label (`#weight-label-${prodId}`).
+     - Triggers a smooth scale pop animation on price update.
+
+3. **Cart & WhatsApp Order Integration:**
+   - Modified `addToCart()` to track composite item keys (`${prodId}_${weight}`) so customers can add multiple pack sizes of the same snack (e.g. 150g and 500g) as separate cart line items.
+   - Updated cart drawer items to display the chosen pack size badge (e.g. `250g pack`), unit price, and item subtotal.
+   - Updated quantity controls and removal functions in the cart drawer to operate on specific variant keys.
+   - Ensured WhatsApp checkout order messages include the exact pack weight variant ordered (e.g., `*Classic Banana Chips* (250g pack) - Qty: 2 × ₹160 = ₹320`).
+
+4. **Multi-File Synchronization & Syntax Verification:**
+   - Synced changes across [`hero.html`](file:///d:/botany/chipico/CHIPCA%20SITE/hero.html), [`Chipca site 1.html`](file:///d:/botany/chipico/CHIPCA%20SITE/Chipca%20site%201.html), and [`index.html`](file:///d:/botany/chipico/CHIPCA%20SITE/index.html).
+   - Verified JavaScript syntax with Node.js parser (`0 syntax errors`).
+   - Committed and pushed to GitHub branch `exp`.

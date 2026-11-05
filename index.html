@@ -481,6 +481,63 @@ button{font:inherit;color:inherit;cursor:pointer}
   margin:0;
   text-transform:uppercase;
 }
+.card-weight-selector{
+  margin-top:10px;
+  display:flex;
+  flex-direction:column;
+  gap:6px;
+}
+.weight-selector-label{
+  font-family:'Poppins',sans-serif;
+  font-size:.70rem;
+  font-weight:600;
+  text-transform:uppercase;
+  letter-spacing:.06em;
+  color:#827566;
+}
+.weight-pills{
+  display:grid;
+  grid-template-columns:repeat(3, 1fr);
+  gap:6px;
+}
+.weight-pill{
+  appearance:none;
+  -webkit-appearance:none;
+  background:#faf7f2;
+  border:1.5px solid rgba(36,26,12,0.15);
+  border-radius:8px;
+  padding:7px 0;
+  font-family:'Poppins',sans-serif;
+  font-size:.78rem;
+  font-weight:600;
+  color:#3d2f20;
+  text-align:center;
+  cursor:pointer;
+  transition:all .2s ease;
+  user-select:none;
+  line-height:1.2;
+}
+.weight-pill:hover{
+  border-color:#241a0c;
+  background:#efe6d5;
+  color:#1a1208;
+}
+.weight-pill.active{
+  background:#241a0c;
+  color:#f6ede2;
+  border-color:#241a0c;
+  box-shadow:0 2px 8px rgba(36,26,12,0.22);
+}
+.cart-item-weight-badge{
+  background:#ece3d1;
+  color:#241a0c;
+  font-weight:600;
+  font-size:.76rem;
+  padding:2px 7px;
+  border-radius:4px;
+  display:inline-block;
+  margin-left:4px;
+}
 .card-price-row{
   display:flex;
   align-items:baseline;
@@ -1150,7 +1207,7 @@ button{font:inherit;color:inherit;cursor:pointer}
     </div>
     <div class="craft-row">
       <h2 class="craft-headline">PACKED TO STAY CRISP.</h2>
-      <p class="craft-desc">Sealed in 100 g packs with the backwaters on the back, and the good bite inside.</p>
+      <p class="craft-desc">Available in fresh 150g, 250g, and 500g packs with the backwaters on the back, and the good bite inside.</p>
     </div>
   </div>
 </section>
@@ -1635,8 +1692,11 @@ const SHOP_ITEMS = [
     title: 'Classic Banana Chips',
     subtitle: 'Authentic Nendran',
     badge: 'Best Seller',
-    weight: '100g pack',
-    price: 70,
+    variants: {
+      '150g': { price: 99, label: '150g pack' },
+      '250g': { price: 160, label: '250g pack' },
+      '500g': { price: 310, label: '500g pack' }
+    },
     img: 'classic.png',
     color: '#4A2C18'
   },
@@ -1645,8 +1705,11 @@ const SHOP_ITEMS = [
     title: 'Robusta Banana Chips',
     subtitle: 'Pure Coconut Oil',
     badge: 'Delicate Crunch',
-    weight: '100g pack',
-    price: 70,
+    variants: {
+      '150g': { price: 99, label: '150g pack' },
+      '250g': { price: 160, label: '250g pack' },
+      '500g': { price: 310, label: '500g pack' }
+    },
     img: 'robusta.png',
     color: '#6F8168'
   },
@@ -1655,8 +1718,11 @@ const SHOP_ITEMS = [
     title: 'Heritage Taro Chips',
     subtitle: 'Handpicked Root Farm',
     badge: 'Nutty & Earthy',
-    weight: '100g pack',
-    price: 85,
+    variants: {
+      '150g': { price: 120, label: '150g pack' },
+      '250g': { price: 195, label: '250g pack' },
+      '500g': { price: 380, label: '500g pack' }
+    },
     img: 'taro.png',
     color: '#0B5A52'
   },
@@ -1665,8 +1731,11 @@ const SHOP_ITEMS = [
     title: 'Masala Banana Chips',
     subtitle: 'Malabar Roasted Spice',
     badge: 'Zesty Kick',
-    weight: '100g pack',
-    price: 75,
+    variants: {
+      '150g': { price: 110, label: '150g pack' },
+      '250g': { price: 175, label: '250g pack' },
+      '500g': { price: 340, label: '500g pack' }
+    },
     img: 'masala.png',
     color: '#9E3A1F'
   },
@@ -1675,16 +1744,52 @@ const SHOP_ITEMS = [
     title: 'Single Stick Chips',
     subtitle: 'Artisanal Matchstick Cut',
     badge: 'Tea Companion',
-    weight: '100g pack',
-    price: 75,
+    variants: {
+      '150g': { price: 110, label: '150g pack' },
+      '250g': { price: 175, label: '250g pack' },
+      '500g': { price: 340, label: '500g pack' }
+    },
     img: 'stick.png',
     color: '#C27B1C'
   }
 ];
 
-// In-memory Cart state
+// In-memory Cart & Shop state
 let CART = [];
 const itemQuantities = {};
+const selectedProductWeights = {};
+
+function selectProductWeight(id, weight){
+  const prod = SHOP_ITEMS.find(x => x.id === id);
+  if(!prod || !prod.variants[weight]) return;
+  selectedProductWeights[id] = weight;
+
+  const card = document.getElementById('card-' + id);
+  if(card){
+    const pills = card.querySelectorAll('.weight-pill');
+    pills.forEach(p => {
+      const match = p.getAttribute('data-weight') === weight;
+      p.classList.toggle('active', match);
+      p.setAttribute('aria-pressed', match ? 'true' : 'false');
+    });
+  }
+
+  const priceEl = document.getElementById('price-' + id);
+  const weightLabelEl = document.getElementById('weight-label-' + id);
+  const variant = prod.variants[weight];
+
+  if(priceEl){
+    priceEl.textContent = '₹' + variant.price;
+    priceEl.animate([
+      { transform: 'scale(1.18)', color: '#d97706' },
+      { transform: 'scale(1)', color: '#241a0c' }
+    ], { duration: 240, easing: 'ease-out' });
+  }
+
+  if(weightLabelEl){
+    weightLabelEl.textContent = variant.label;
+  }
+}
 
 function initShop(){
   const grid = document.getElementById('shop-grid');
@@ -1692,6 +1797,8 @@ function initShop(){
 
   grid.innerHTML = SHOP_ITEMS.map(p => {
     itemQuantities[p.id] = 1;
+    selectedProductWeights[p.id] = '150g';
+    const initVar = p.variants['150g'];
     return `
       <article class="product-card" id="card-${p.id}">
         <span class="card-badge">${p.badge}</span>
@@ -1702,9 +1809,19 @@ function initShop(){
         <div class="card-info">
           <span class="card-flavor-tag">${p.subtitle}</span>
           <h3 class="card-title">${p.title}</h3>
+
+          <div class="card-weight-selector">
+            <span class="weight-selector-label">Pack Size</span>
+            <div class="weight-pills" role="radiogroup" aria-label="Select pack size">
+              <button type="button" class="weight-pill active" data-weight="150g" onclick="selectProductWeight('${p.id}', '150g')" aria-pressed="true">150g</button>
+              <button type="button" class="weight-pill" data-weight="250g" onclick="selectProductWeight('${p.id}', '250g')" aria-pressed="false">250g</button>
+              <button type="button" class="weight-pill" data-weight="500g" onclick="selectProductWeight('${p.id}', '500g')" aria-pressed="false">500g</button>
+            </div>
+          </div>
+
           <div class="card-price-row">
-            <span class="card-price">₹${p.price}</span>
-            <span class="card-weight">${p.weight}</span>
+            <span class="card-price" id="price-${p.id}">₹${initVar.price}</span>
+            <span class="card-weight" id="weight-label-${p.id}">${initVar.label}</span>
           </div>
           <div class="card-actions">
             <div class="qty-stepper">
@@ -1759,17 +1876,22 @@ function changeCardQty(id, delta){
 function addToCart(id){
   const prod = SHOP_ITEMS.find(x => x.id === id);
   if(!prod) return;
+  const weight = selectedProductWeights[id] || '150g';
+  const variant = prod.variants[weight] || prod.variants['150g'];
   const qty = itemQuantities[id] || 1;
+  const itemKey = `${prod.id}_${weight}`;
 
-  const existing = CART.find(x => x.id === id);
+  const existing = CART.find(x => x.key === itemKey);
   if(existing){
     existing.qty += qty;
   } else {
     CART.push({
+      key: itemKey,
       id: prod.id,
       title: prod.title,
-      price: prod.price,
-      weight: prod.weight,
+      price: variant.price,
+      weight: variant.label,
+      weightKey: weight,
       img: prod.img,
       qty: qty
     });
@@ -1799,18 +1921,18 @@ function addToCart(id){
   }
 }
 
-function updateCartQty(id, delta){
-  const itm = CART.find(x => x.id === id);
+function updateCartQty(key, delta){
+  const itm = CART.find(x => x.key === key);
   if(!itm) return;
   itm.qty += delta;
   if(itm.qty <= 0){
-    CART = CART.filter(x => x.id !== id);
+    CART = CART.filter(x => x.key !== key);
   }
   renderCart();
 }
 
-function removeCartItem(id){
-  CART = CART.filter(x => x.id !== id);
+function removeCartItem(key){
+  CART = CART.filter(x => x.key !== key);
   renderCart();
 }
 
@@ -1847,7 +1969,7 @@ function renderCart(){
         <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
           <circle cx="9" cy="21" r="1"></circle>
           <circle cx="20" cy="21" r="1"></circle>
-          <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+          <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-2V6l-3-4z"></path>
         </svg>
         <p style="margin:0;font-weight:600;font-size:1rem;color:#241a0c">Your cart is empty</p>
         <p style="margin:4px 0 0;font-size:.84rem;color:#7e7161">Add some delicious Kerala chips from the shop above!</p>
@@ -1866,20 +1988,21 @@ function renderCart(){
       <img src="${item.img}" alt="${item.title}" class="cart-item-thumb">
       <div class="cart-item-info">
         <h4>${item.title}</h4>
-        <div class="cart-item-meta">₹${item.price} each · ${item.weight}</div>
+        <div class="cart-item-meta">₹${item.price} each · <span class="cart-item-weight-badge">${item.weight}</span></div>
         <div class="qty-stepper" style="margin-top:6px;transform:scale(0.85);transform-origin:left center;">
-          <button class="qty-btn" onclick="updateCartQty('${item.id}', -1)" aria-label="Decrease">−</button>
+          <button class="qty-btn" onclick="updateCartQty('${item.key}', -1)" aria-label="Decrease">−</button>
           <span class="qty-val">${item.qty}</span>
-          <button class="qty-btn" onclick="updateCartQty('${item.id}', 1)" aria-label="Increase">+</button>
+          <button class="qty-btn" onclick="updateCartQty('${item.key}', 1)" aria-label="Increase">+</button>
         </div>
       </div>
       <div class="cart-item-actions">
         <span class="cart-item-subtotal">₹${item.price * item.qty}</span>
-        <button class="cart-item-del" onclick="removeCartItem('${item.id}')">Remove</button>
+        <button class="cart-item-del" onclick="removeCartItem('${item.key}')">Remove</button>
       </div>
     </div>
   `).join('');
 }
+
 
 function openCart(){
   const overlay = document.getElementById('cart-overlay');
