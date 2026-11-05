@@ -1037,3 +1037,41 @@ The packet textures are configured in JavaScript inside [`hero.html`](file:///d:
 6. **Files Updated:**
    - [`index.html`](file:///d:/botany/chipico/CHIPCA%20SITE/index.html)
    - [`CHAT_HISTORY.md`](file:///d:/botany/chipico/CHIPCA%20SITE/CHAT_HISTORY.md)
+
+---
+
+### Turn 35
+
+**User:**
+> this is not looking like the reference i have given fix this and use the background of each product same as the hero page backgront colour
+
+**Assistant:**
+#### Changes Made:
+1. **Showcase Background Matched Exactly to Hero Page Flavor Colors:**
+   - Replaced the dark muddy/charcoal background gradients (`#41302f`, `#34403a`, etc.) with each product's authentic hero background color:
+     - **Classic Banana Chips:** `--showcase-bg: #4A2C18`, `--showcase-d: #8A5A33`, `--showcase-ink: #F3E6C4` (rich Kerala roasted banana brown)
+     - **Robusta Chips:** `--showcase-bg: #6F8168`, `--showcase-d: #3F513A`, `--showcase-ink: #16262F` (lush botanical sage green)
+     - **Taro Chips:** `--showcase-bg: #0B5A52`, `--showcase-d: #2D8F83`, `--showcase-ink: #F3E6C4` (deep coastal root teal)
+     - **Masala Banana Chips:** `--showcase-bg: #9E3A1F`, `--showcase-d: #D0623A`, `--showcase-ink: #FBE9C8` (spicy Malabar roasted red)
+     - **Single Stick:** `--showcase-bg: #C27B1C`, `--showcase-d: #8E5410`, `--showcase-ink: #3B1208` (vibrant artisanal matchstick turmeric amber)
+   - `.product-showcase` background updated to:
+     `radial-gradient(circle at 38% 50%, var(--showcase-d), var(--showcase-bg) 75%)` with `.7s` ease transition.
+   - `.hero-curve-divider` background set to `var(--showcase-bg, #4A2C18)`, creating a seamless transition bridging Hero and Showcase.
+
+2. **Full Contrast & Typography Theming Aligned with Hero Ink:**
+   - On rich deep backgrounds (Classic, Taro, Masala), text and icons dynamically use luminous warm cream (`#F3E6C4`, `#FBE9C8`).
+   - On light/medium backgrounds (Robusta, Single Stick), text and benefit icons automatically switch to crisp, dark slate/espresso ink (`#16262F`, `#3B1208`) via `.showcase-content.dark-ink`, eliminating contrast issues and matching hero typography.
+   - Titles styled with flavor accents: Classic (`#F7C873`), Robusta (`#16262F`), Taro (`#5CE8D6`), Masala (`#FFD27D`), Single Stick (`#3B1208`).
+
+3. **Packet Scale & Visual Presence Restored:**
+   - Enlarged `.showcase-visual` to `min-height: clamp(520px, 68vh, 740px)` and `.showcase-anim-wrap` to `max-width: clamp(480px, 54vw, 680px)` with `aspect-ratio: 1400/1620`.
+   - The packet bag now stands tall, bold, and prominent (~440px-480px height), mirroring the reference layout.
+
+4. **Fixed Animation Triggering & Re-Triggering:**
+   - Scoped keyframe animations strictly to `.showcase-burst-svg .pack.active .ray`, `.pack.active .bag`, and `.pack.active .float`. Inactive packs do not run animations in the background.
+   - Marked Pack 0 as `class="pack active"` in initial HTML for immediate burst on first page view.
+   - In `activatePack(k)`, implemented reflow reset (`p.style.display = 'none'; void p.getBoundingClientRect(); p.style.display = ''; p.classList.add('active');`) to guarantee animations re-trigger from 0% with full elastic bounce on every flavor change.
+
+5. **Files Updated:**
+   - [`index.html`](file:///d:/botany/chipico/CHIPCA%20SITE/index.html)
+   - [`CHAT_HISTORY.md`](file:///d:/botany/chipico/CHIPCA%20SITE/CHAT_HISTORY.md)
