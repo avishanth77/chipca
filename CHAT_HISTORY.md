@@ -842,3 +842,38 @@ The packet textures are configured in JavaScript inside [`hero.html`](file:///d:
    - Preserved user manual adjustments in `index.html`.
    - Committed and pushed to GitHub branch `exp`.
 
+
+---
+
+### Turn 28
+
+**User:**
+> USE STICKS.png in the assets folder make it rasie befind from everey product and rotate slightly  in the 2nd page the colour theme of STICKS.png the should change accordding to the product make the STICKS.png as two layers i mean like 2 things one smaller and in bigger like the Layer 2.png which i have give as the reference
+> *[Attachment: Mockup screenshot showing 2-tiered matchstick sunburst halo radiating from behind Single Stick packet on Showcase page (`media_1793858101470_2891c635.png`)]*
+
+**Assistant:**
+#### Changes Made:
+1. **Asset Integration & Resilience:**
+   - Sourced [`ASSETS/STICKS.png`](file:///d:/botany/chipico/CHIPCA%20SITE/ASSETS/STICKS.png) and added root fallback copies (`STICKS.png`, `sticks.png`, `ASSETS/STICKS.webp`, `sticks.webp`) to ensure zero broken images in all environments.
+2. **Created Two-Tier Layered Halo (`.showcase-sticks-halo`):**
+   - Built a dual-layer radiating matchstick structure behind the packet in `.showcase-visual`:
+     - **Outer Layer (`.sticks-outer`):** Scaled to `1.12x`, rotating slowly clockwise (`48s` linear infinite loop).
+     - **Inner Layer (`.sticks-inner`):** Scaled to `0.84x`, offset rotated by `18deg` to fill the interstitial gaps between outer sticks, counter-rotating slowly (`38s` linear infinite loop).
+   - Styled to match the user's reference mockup [`Layer 2.png`](file:///d:/botany/chipico/CHIPCA%20SITE/ASSETS/Layer%202.png).
+3. **Dynamic Flavor-Reactive Color Theming:**
+   - Attached product-specific dynamic CSS filter themes in `PRODUCTS`:
+     - **Classic:** `hue-rotate(0deg) saturate(1.05) brightness(1.02)` (Warm golden banana chips yellow)
+     - **Robusta:** `hue-rotate(68deg) saturate(1.1) brightness(0.96)` (Lush botanical foil green)
+     - **Taro:** `hue-rotate(130deg) saturate(1.15) brightness(0.98)` (Earthy heritage coastal root teal)
+     - **Masala:** `hue-rotate(-38deg) saturate(1.45) brightness(1.02)` (Malabar roasted fiery red chili)
+     - **Single Stick:** `hue-rotate(8deg) saturate(1.2) brightness(1.05)` (Artisanal matchstick amber)
+   - Inner layer receives subtle complementary tint contrast (`brightness(0.96) saturate(1.1)`), mirroring the multi-tone chip sticks in the reference.
+4. **"Raise Behind & Rotate" Entrance Animation:**
+   - In `renderShowcase()`: On product transition, the halo drops down with `.rising` (`scale(0.66)`, `translateY(15px)`, `rotate(-14deg)`, `opacity: 0`), then smoothly rises and blooms from behind the new packet with an elastic cubic-bezier curve (`cubic-bezier(.18,.89,.32,1.28)`), rotating into place as the new flavor color takes effect.
+   - On packet hover, the halo subtly expands (`scale(1.05) translateY(-52%)`) alongside the packet.
+5. **Multi-File Synchronization & Syntax Verification:**
+   - Synced across [`hero.html`](file:///d:/botany/chipico/CHIPCA%20SITE/hero.html), [`Chipca site 1.html`](file:///d:/botany/chipico/CHIPCA%20SITE/Chipca%20site%201.html), and [`index.html`](file:///d:/botany/chipico/CHIPCA%20SITE/index.html).
+   - Validated JavaScript syntax (`0 syntax errors`).
+   - Committed and pushed to GitHub branch `exp`.
+
+

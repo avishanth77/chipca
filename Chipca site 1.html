@@ -269,7 +269,7 @@ button{font:inherit;color:inherit;cursor:pointer}
 .hero-curve-divider svg{position:absolute;top:0;left:0;width:100%;height:100%;display:block;transition:fill .7s}
 
 /* Product Showcase Section */
-.product-showcase{position:relative;background:#ffffff;color:#241a0c;padding:clamp(20px,3.5vh,45px) 5vw clamp(60px,8vh,110px);z-index:2;min-height:85vh;display:flex;flex-direction:column;justify-content:center;align-items:center}
+.product-showcase{position:relative;background:#ffffff;color:#241a0c;padding:clamp(20px,3.5vh,45px) 5vw clamp(60px,8vh,110px);z-index:2;min-height:85vh;display:flex;flex-direction:column;justify-content:center;align-items:center;overflow:hidden}
 .showcase-container{max-width:1260px;width:100%;margin:0 auto;display:grid;grid-template-columns:1.15fr 1fr;align-items:center;gap:clamp(30px,5vw,75px);position:relative}
 
 @media(max-width:860px){
@@ -282,9 +282,81 @@ button{font:inherit;color:inherit;cursor:pointer}
 .showcase-img-wrap{position:relative;display:inline-flex;flex-direction:column;align-items:center;transition:transform .4s cubic-bezier(.2,.8,.2,1)}
 .showcase-img-wrap:hover{transform:translateY(-8px) scale(1.02)}
 .showcase-img-wrap:hover .showcase-floor-shadow{transform:scale(0.92);opacity:0.75}
-.showcase-img{max-height:clamp(420px,60vh,640px);max-width:100%;width:auto;object-fit:contain;display:block;filter:drop-shadow(0 16px 20px rgba(0,0,0,.1));transition:opacity .35s ease,transform .35s ease;user-select:none;position:relative;z-index:1}
-.showcase-floor-shadow{position:relative;width:80%;height:28px;margin-top:-14px;background:radial-gradient(ellipse at center, rgba(28,18,8,0.52) 0%, rgba(28,18,8,0.22) 48%, rgba(0,0,0,0) 74%);border-radius:50%;filter:blur(8px);pointer-events:none;z-index:0;transition:transform .4s cubic-bezier(.2,.8,.2,1), opacity .35s ease}
+.showcase-img-wrap:hover .showcase-sticks-halo{transform:translate(-50%, -52%) scale(1.05)}
+.showcase-img{max-height:clamp(420px,60vh,640px);max-width:100%;width:auto;object-fit:contain;display:block;filter:drop-shadow(0 16px 20px rgba(0,0,0,.1));transition:opacity .35s ease,transform .35s ease;user-select:none;position:relative;z-index:2}
+.showcase-floor-shadow{position:relative;width:80%;height:28px;margin-top:-14px;background:radial-gradient(ellipse at center, rgba(28,18,8,0.52) 0%, rgba(28,18,8,0.22) 48%, rgba(0,0,0,0) 74%);border-radius:50%;filter:blur(8px);pointer-events:none;z-index:1;transition:transform .4s cubic-bezier(.2,.8,.2,1), opacity .35s ease}
 .showcase-floor-shadow::before{content:'';position:absolute;top:3px;left:12%;width:76%;height:11px;background:rgba(20,12,5,0.58);border-radius:50%;filter:blur(4px)}
+
+/* 2-Tier Matchstick Burst Halo */
+.showcase-sticks-halo{
+  position:absolute;
+  top:48%;
+  left:50%;
+  transform:translate(-50%, -50%) scale(1);
+  width:clamp(440px, 54vw, 680px);
+  height:clamp(440px, 54vw, 680px);
+  pointer-events:none;
+  z-index:0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  opacity:1;
+  transition:transform .65s cubic-bezier(.18,.89,.32,1.28), opacity .45s ease;
+  will-change:transform, opacity;
+}
+.showcase-sticks-halo.rising{
+  transform:translate(-50%, -43%) scale(0.66) rotate(-14deg);
+  opacity:0;
+  transition:none;
+}
+.sticks-layer{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  transform-origin:center center;
+  transition:filter .6s ease;
+}
+.sticks-layer img{
+  width:100%;
+  height:100%;
+  object-fit:contain;
+  display:block;
+  user-select:none;
+  -webkit-user-drag:none;
+}
+.sticks-outer{
+  transform:scale(1.12);
+  animation:rotateSticksOuter 48s linear infinite;
+}
+.sticks-inner{
+  transform:scale(0.84) rotate(18deg);
+  animation:rotateSticksInner 38s linear infinite;
+}
+
+@keyframes rotateSticksOuter{
+  from{transform:scale(1.12) rotate(0deg)}
+  to{transform:scale(1.12) rotate(360deg)}
+}
+@keyframes rotateSticksInner{
+  from{transform:scale(0.84) rotate(18deg)}
+  to{transform:scale(0.84) rotate(-342deg)}
+}
+
+@media(max-width:860px){
+  .showcase-sticks-halo{
+    width:clamp(320px, 86vw, 440px);
+    height:clamp(320px, 86vw, 440px);
+    top:46%;
+  }
+}
+@media(prefers-reduced-motion:reduce){
+  .sticks-outer, .sticks-inner{animation:none!important}
+  .showcase-sticks-halo{transition:none!important}
+}
 
 .showcase-content{display:flex;flex-direction:column;align-items:center;text-align:center}
 .showcase-title-box{display:flex;flex-direction:column;align-items:center;margin-bottom:1.2rem}
@@ -1315,6 +1387,16 @@ button{font:inherit;color:inherit;cursor:pointer}
   <div class="showcase-container">
     <div class="showcase-visual">
       <div class="showcase-img-wrap">
+        <!-- 2-Tier Matchstick Burst Halo -->
+        <div class="showcase-sticks-halo" id="showcase-sticks-halo" aria-hidden="true">
+          <div class="sticks-layer sticks-outer" id="sticks-outer">
+            <img src="ASSETS/STICKS.png" alt="" draggable="false">
+          </div>
+          <div class="sticks-layer sticks-inner" id="sticks-inner">
+            <img src="ASSETS/STICKS.png" alt="" draggable="false">
+          </div>
+        </div>
+
         <img id="showcase-img" class="showcase-img" src="classic.png" alt="Classic Chips" draggable="false">
         <div class="showcase-floor-shadow" id="showcase-shadow" aria-hidden="true"></div>
       </div>
@@ -1701,6 +1783,7 @@ const PRODUCTS = [
     subtitle: 'chips',
     titleColor: '#b38363',
     img: 'classic.png',
+    stickFilter: 'hue-rotate(0deg) saturate(1.05) brightness(1.02)',
     desc: 'Golden, crispy, and irresistibly delicious! Chipca Classic Banana Chips bring you the authentic taste of Kerala in every bite. Made from carefully selected raw bananas and perfectly fried to achieve that signature crunch, every slice delivers a delightful blend of traditional flavour and freshness.',
     badges: [
       { icon: 'premium_bananas.png', label: 'Premium Bananas' },
@@ -1713,6 +1796,7 @@ const PRODUCTS = [
     subtitle: 'chips',
     titleColor: '#5c7255',
     img: 'robusta.png',
+    stickFilter: 'hue-rotate(68deg) saturate(1.1) brightness(0.96)',
     desc: 'Naturally subtle, light, and delicately crisp! Made from premium ripened Robusta bananas, these chips deliver a gentle tropical sweetness balanced with an airy crunch. Fried to wholesome perfection in pure coconut oil for an everyday guilt-free snack.',
     badges: [
       { icon: 'premium_bananas.png', label: 'Farm-Fresh Robusta' },
@@ -1725,6 +1809,7 @@ const PRODUCTS = [
     subtitle: 'chips',
     titleColor: '#25796f',
     img: 'taro.png',
+    stickFilter: 'hue-rotate(130deg) saturate(1.15) brightness(0.98)',
     desc: 'Earthy, rustic, and exceptionally crunchy! Sourced from tender, organically nurtured root farms, our Taro Chips are sliced wafer-thin and sprinkled with pure sea salt to let the deep, nutty root flavors shine through. A rare heritage snacking crunch.',
     badges: [
       { icon: 'handpicked_taro_roots.png', label: 'Handpicked Taro Roots' },
@@ -1737,6 +1822,7 @@ const PRODUCTS = [
     subtitle: 'chips',
     titleColor: '#b84724',
     img: 'masala.png',
+    stickFilter: 'hue-rotate(-38deg) saturate(1.45) brightness(1.02)',
     desc: 'Bold, fiery, and bursting with coastal spices! Our Classic banana chips tossed generously in an authentic Malabar blend of roasted red chillies, black pepper, cumin, and tangy spices. Every crunchy bite delivers an explosive burst of savory heat.',
     badges: [
       { icon: 'malabar_spices.png', label: 'Malabar Spices' },
@@ -1749,6 +1835,7 @@ const PRODUCTS = [
     subtitle: 'sticks',
     titleColor: '#b06d15',
     img: 'stick.png',
+    stickFilter: 'hue-rotate(8deg) saturate(1.2) brightness(1.05)',
     desc: 'Slender, super-crunchy, and wildly addictive! Crafted in the time-honored Kerala tradition, hearty raw bananas are cut into slender artisanal matchsticks and slow-crisped for an intense crunch. The ultimate companion for your afternoon tea or coffee.',
     badges: [
       { icon: 'artisanal_matchstick_cut.png', label: 'Artisanal Matchstick Cut' },
@@ -1776,22 +1863,31 @@ function renderShowcase(idx, anim = true){
   const sub = $('#showcase-subtitle');
   const desc = $('#showcase-desc');
   const badges = $('#showcase-badges');
-
   const sh = $('#showcase-shadow');
+  const halo = $('#showcase-sticks-halo');
+  const outerSticks = $('#sticks-outer');
+  const innerSticks = $('#sticks-inner');
+
   if(anim && !reduce){
     img.style.opacity = '0';
     img.style.transform = 'scale(0.93) translateY(10px)';
     if(sh) { sh.style.opacity = '0'; sh.style.transform = 'scale(0.85)'; }
     desc.style.opacity = '0';
+    if(halo) halo.classList.add('rising');
     setTimeout(()=>{
       apply();
       img.style.opacity = '1';
       img.style.transform = 'scale(1) translateY(0)';
       if(sh) { sh.style.opacity = '1'; sh.style.transform = 'scale(1)'; }
       desc.style.opacity = '1';
+      if(halo){
+        void halo.offsetWidth;
+        halo.classList.remove('rising');
+      }
     }, 180);
   } else {
     apply();
+    if(halo) halo.classList.remove('rising');
   }
 
   function apply(){
@@ -1801,6 +1897,12 @@ function renderShowcase(idx, anim = true){
     title.style.color = p.titleColor;
     sub.textContent = p.subtitle;
     desc.textContent = p.desc;
+
+    // Dynamically update the color theme of the 2-tier sticks halo
+    const baseFilter = p.stickFilter || 'none';
+    if(outerSticks) outerSticks.style.filter = baseFilter;
+    if(innerSticks) innerSticks.style.filter = baseFilter !== 'none' ? (baseFilter + ' brightness(0.96) saturate(1.1)') : 'none';
+
     badges.innerHTML = p.badges.map(b => {
       const isImg = b.icon && b.icon.endsWith('.png');
       const iconHtml = isImg
