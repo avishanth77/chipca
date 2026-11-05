@@ -905,4 +905,27 @@ The packet textures are configured in JavaScript inside [`hero.html`](file:///d:
    - Committed and pushed to GitHub branch `exp`.
 
 
+---
+
+### Turn 30
+
+**User:**
+> remove the bigger one
+
+**Assistant:**
+#### Changes Made:
+1. **Removed Bigger Outer Halo Layer:**
+   - Removed `.sticks-outer` (`#sticks-outer`) and `@keyframes rotateSticksOuter` from the markup and styles.
+   - Retained the single, compact smaller halo layer (`.sticks-inner` / `#sticks-inner`) with `Golden Brushstroke Sunburst Halo.png` at scale `0.85`.
+2. **Simplified Script & Color Theming:**
+   - Streamlined `renderShowcase()` in JavaScript to control the single sunburst halo directly.
+   - Applied full flavor color theme filters (`stickFilter`) directly to the sunburst halo for all 5 products.
+   - Retained ambient slow rotation (`40s` linear infinite loop) and the elastic "raise from behind & rotate" entrance animation on product transitions.
+3. **Multi-File Synchronization & Syntax Verification:**
+   - Updated [`hero.html`](file:///d:/botany/chipico/CHIPCA%20SITE/hero.html), [`Chipca site 1.html`](file:///d:/botany/chipico/CHIPCA%20SITE/Chipca%20site%201.html), and [`index.html`](file:///d:/botany/chipico/CHIPCA%20SITE/index.html).
+   - Validated JavaScript syntax (`0 syntax errors`).
+   - Committed and pushed to GitHub branch `exp`.
+
+
+
 

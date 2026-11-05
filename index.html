@@ -287,7 +287,7 @@ button{font:inherit;color:inherit;cursor:pointer}
 .showcase-floor-shadow{position:relative;width:80%;height:28px;margin-top:-14px;background:radial-gradient(ellipse at center, rgba(28,18,8,0.52) 0%, rgba(28,18,8,0.22) 48%, rgba(0,0,0,0) 74%);border-radius:50%;filter:blur(8px);pointer-events:none;z-index:1;transition:transform .4s cubic-bezier(.2,.8,.2,1), opacity .35s ease}
 .showcase-floor-shadow::before{content:'';position:absolute;top:3px;left:12%;width:76%;height:11px;background:rgba(20,12,5,0.58);border-radius:50%;filter:blur(4px)}
 
-/* 2-Tier Matchstick Burst Halo */
+/* Golden Brushstroke Sunburst Halo */
 .showcase-sticks-halo{
   position:absolute;
   top:48%;
@@ -328,22 +328,14 @@ button{font:inherit;color:inherit;cursor:pointer}
   user-select:none;
   -webkit-user-drag:none;
 }
-.sticks-outer{
-  transform:scale(1.12);
-  animation:rotateSticksOuter 48s linear infinite;
-}
 .sticks-inner{
-  transform:scale(0.84) rotate(18deg);
-  animation:rotateSticksInner 38s linear infinite;
+  transform:scale(0.85);
+  animation:rotateSticks 40s linear infinite;
 }
 
-@keyframes rotateSticksOuter{
-  from{transform:scale(1.12) rotate(0deg)}
-  to{transform:scale(1.12) rotate(360deg)}
-}
-@keyframes rotateSticksInner{
-  from{transform:scale(0.84) rotate(18deg)}
-  to{transform:scale(0.84) rotate(-342deg)}
+@keyframes rotateSticks{
+  from{transform:scale(0.85) rotate(0deg)}
+  to{transform:scale(0.85) rotate(360deg)}
 }
 
 @media(max-width:860px){
@@ -354,7 +346,7 @@ button{font:inherit;color:inherit;cursor:pointer}
   }
 }
 @media(prefers-reduced-motion:reduce){
-  .sticks-outer, .sticks-inner{animation:none!important}
+  .sticks-inner{animation:none!important}
   .showcase-sticks-halo{transition:none!important}
 }
 
@@ -1387,11 +1379,8 @@ button{font:inherit;color:inherit;cursor:pointer}
   <div class="showcase-container">
     <div class="showcase-visual">
       <div class="showcase-img-wrap">
-        <!-- 2-Tier Matchstick Burst Halo -->
+        <!-- Golden Brushstroke Sunburst Halo -->
         <div class="showcase-sticks-halo" id="showcase-sticks-halo" aria-hidden="true">
-          <div class="sticks-layer sticks-outer" id="sticks-outer">
-            <img src="ASSETS/Golden%20Brushstroke%20Sunburst%20Halo.png" alt="" draggable="false">
-          </div>
           <div class="sticks-layer sticks-inner" id="sticks-inner">
             <img src="ASSETS/Golden%20Brushstroke%20Sunburst%20Halo.png" alt="" draggable="false">
           </div>
@@ -1865,7 +1854,6 @@ function renderShowcase(idx, anim = true){
   const badges = $('#showcase-badges');
   const sh = $('#showcase-shadow');
   const halo = $('#showcase-sticks-halo');
-  const outerSticks = $('#sticks-outer');
   const innerSticks = $('#sticks-inner');
 
   if(anim && !reduce){
@@ -1898,10 +1886,9 @@ function renderShowcase(idx, anim = true){
     sub.textContent = p.subtitle;
     desc.textContent = p.desc;
 
-    // Dynamically update the color theme of the 2-tier sticks halo
+    // Dynamically update the color theme of the sunburst halo
     const baseFilter = p.stickFilter || 'none';
-    if(outerSticks) outerSticks.style.filter = baseFilter;
-    if(innerSticks) innerSticks.style.filter = baseFilter !== 'none' ? (baseFilter + ' brightness(0.96) saturate(1.1)') : 'none';
+    if(innerSticks) innerSticks.style.filter = baseFilter;
 
     badges.innerHTML = p.badges.map(b => {
       const isImg = b.icon && b.icon.endsWith('.png');
