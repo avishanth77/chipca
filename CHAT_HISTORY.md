@@ -811,3 +811,34 @@ The packet textures are configured in JavaScript inside [`hero.html`](file:///d:
    - Synced changes across [`hero.html`](file:///d:/botany/chipico/CHIPCA%20SITE/hero.html), [`Chipca site 1.html`](file:///d:/botany/chipico/CHIPCA%20SITE/Chipca%20site%201.html), and [`index.html`](file:///d:/botany/chipico/CHIPCA%20SITE/index.html).
    - Validated JavaScript syntax with Node.js parser (`0 syntax errors`).
    - Committed and pushed to GitHub branch `exp`.
+
+
+---
+
+### Turn 27
+
+**User:**
+> on this there is an issue inthe pakect image a small postion is mssing so fix this
+> *[Attachments: Unclipped original photo of Robusta packet (`media_1793855568709_43d96484.jpg`) and zoomed screenshot highlighting missing foil chunk on left edge (`media_1793855576864_71586050.jpg`)]*
+
+**Assistant:**
+#### Changes Made:
+1. **Identified Missing Foil Defect:**
+   - Diagnosed missing rectangular bites/notches in the left green foil region of `robusta.png` (rows 704 to 778, columns 63 to 190) where alpha had been accidentally cut to 0 while surrounded by opaque foil.
+2. **High-Precision SIFT + Homography Restoration:**
+   - Aligned the user's unclipped master photograph (`media_1793855568709_43d96484.jpg`) to the 720×1008 canonical canvas using SIFT feature matching (1,147 RANSAC inliers) and Lanczos-4 warping.
+   - Detected the continuous sub-pixel foil contour across rows 704–778, restoring the original foil artwork, printed banana leaf line-art, and shading.
+   - Applied smooth-step Gaussian edge antialiasing (3-pixel window) matching the surrounding foil edge profile for seamless blending on both light and dark backgrounds.
+3. **Asset & Texture Regeneration:**
+   - Saved the restored high-resolution image to [`robusta.png`](file:///d:/botany/chipico/CHIPCA%20SITE/robusta.png) (720×1008 RGBA).
+   - Generated optimized WebP asset [`robusta.webp`](file:///d:/botany/chipico/CHIPCA%20SITE/robusta.webp) (Quality 95, method 6).
+   - Re-encoded the base64 WebP URI and updated `PACK.robusta` across:
+     - [`hero.html`](file:///d:/botany/chipico/CHIPCA%20SITE/hero.html)
+     - [`Chipca site 1.html`](file:///d:/botany/chipico/CHIPCA%20SITE/Chipca%20site%201.html)
+     - [`index.html`](file:///d:/botany/chipico/CHIPCA%20SITE/index.html)
+4. **Verification & Deployment:**
+   - Verified 0 interior holes in packet mask.
+   - Validated JavaScript syntax across all 3 HTML files (`0 syntax errors`).
+   - Preserved user manual adjustments in `index.html`.
+   - Committed and pushed to GitHub branch `exp`.
+
