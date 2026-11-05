@@ -999,3 +999,52 @@ The packet textures are configured in JavaScript inside [`hero.html`](file:///d:
    - Validated JavaScript syntax across all HTML files (`0 syntax errors`).
    - Committed and pushed cleanly to branch `exp` on GitHub.
 
+
+
+---
+
+### Turn 35
+
+**User:**
+> I'm adding an animated "burst background" product showcase to my existing website. I've attached chipca_animation.html, a working self-contained reference. Please integrate it into my site as a reusable section/component without breaking existing styles, routing or layout.
+>
+> Context
+> - My site stack: plain HTML / CSS / JS
+> - Where it goes: below the hero, replacing old showcase at #showcase
+> - Brand: Chipca, "The Good Bite"
+>
+> Deliverables: the component code, the asset files, a short note on how to add a new flavour, and the exact place you inserted it in my site. Don't change unrelated files.
+
+**Assistant:**
+#### Changes Made:
+1. **Extracted & Optimized Asset Footprint (115 Files, 2.44 MB Total):**
+   - Extracted all embedded base64 WebP images from `product animation/chipca_animation.html` into structured folders under [`ASSETS/chipca/`](file:///d:/botany/chipico/CHIPCA%20SITE/ASSETS/chipca/):
+     - `classic/`: `bag.webp` + 22 rays (`ray-01.webp` .. `ray-22.webp`)
+     - `single/`: `bag.webp` + 22 rays (`ray-01.webp` .. `ray-22.webp`)
+     - `taro/`: `bag.webp` + 22 rays (`ray-01.webp` .. `ray-22.webp`)
+     - `masala/`: `bag.webp` + 22 rays (`ray-01.webp` .. `ray-22.webp`)
+     - `robusta/`: `bag.webp` (patched foil notch) + 22 rays (`ray-01.webp` .. `ray-22.webp`)
+   - Created configuration files [`ASSETS/chipca/burst-config.json`](file:///d:/botany/chipico/CHIPCA%20SITE/ASSETS/chipca/burst-config.json) and [`ASSETS/chipca/burst-config.js`](file:///d:/botany/chipico/CHIPCA%20SITE/ASSETS/chipca/burst-config.js) maintaining exact `viewBox` coordinates (`x`, `y`, `width`, `height`, `--tx`, `--ty`, `--d`, `--r`), shadow filters, background gradients, and optional `buyUrl` parameters.
+
+2. **Self-Contained Namespaced Component CSS (`.chipca-burst-*`):**
+   - Engineered zero-leakage CSS classes prefixed with `.chipca-burst-*`.
+   - Pure CSS hardware-accelerated animations (`transform` and `opacity`):
+     - `chipca-burst-pop`: 1.1s `cubic-bezier(0.2, 1.4, 0.4, 1)`
+     - `chipca-burst-float`: 4s `ease-in-out` alternate
+     - `chipca-burst-ray-anim`: 1s `cubic-bezier(0.2, 1.25, 0.4, 1)` with 45ms clockwise stagger
+     - `chipca-burst-breathe`: 5s `ease-in-out` alternate
+     - `chipca-burst-collapse`: 0.5s `cubic-bezier(0.5, 0, 0.9, 0.5)`
+     - `chipca-burst-out`: 0.5s `ease-in`
+   - Fully responsive stage (`max-width: 580px`, `aspect-ratio: 1400 / 1800`) with `touch-action: pan-y` ensuring unhindered vertical page scrolling.
+   - Connected background styling with `.hero-curve-divider` for seamless gradient flow.
+
+3. **High-Performance JavaScript Controller & IntersectionObserver:**
+   - Burst animation starts exclusively when scrolled into viewport (`IntersectionObserver`, threshold `0.25`), not on page load.
+   - Intelligent lazy loading: initial page load downloads only the first pack (~450 KB), then preloads the next pack dynamically.
+   - Interactive controls: desktop side arrows, mobile bottom nav buttons, flavor dots, keyboard left/right arrow navigation, touch swipe gestures, and replay button.
+   - Full accessibility: `prefers-reduced-motion` instant display with no motion, `aria-label` attributes, and keyboard focus rings (`:focus-visible`).
+   - Optional configurable `buyUrl` / `buyLabel` per flavor.
+
+4. **Multi-File Synchronization:**
+   - Synchronized changes across [`index.html`](file:///d:/botany/chipico/CHIPCA%20SITE/index.html), [`hero.html`](file:///d:/botany/chipico/CHIPCA%20SITE/hero.html), and [`Chipca site 1.html`](file:///d:/botany/chipico/CHIPCA%20SITE/Chipca%20site%201.html).
+   - Validated syntax in Node.js (0 errors).
