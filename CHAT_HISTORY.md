@@ -877,3 +877,32 @@ The packet textures are configured in JavaScript inside [`hero.html`](file:///d:
    - Committed and pushed to GitHub branch `exp`.
 
 
+---
+
+### Turn 29
+
+**User:**
+> Golden Brushstroke Sunburst Halo.png insteded of the STICKS.png
+
+**Assistant:**
+#### Changes Made:
+1. **Integrated `Golden Brushstroke Sunburst Halo.png`:**
+   - Sourced the high-resolution master asset [`ASSETS/Golden Brushstroke Sunburst Halo.png`](file:///d:/botany/chipico/CHIPCA%20SITE/ASSETS/Golden%20Brushstroke%20Sunburst%20Halo.png) ($1536 \times 1024$).
+   - Centered the sunburst burst on a square $1200 \times 1200$ canvas with mathematical symmetry ($600.5, 599.5$) to ensure 100% circular, wobble-free rotation.
+   - Backed up uncropped master to [`ASSETS/Golden Brushstroke Sunburst Halo.original.png`](file:///d:/botany/chipico/CHIPCA%20SITE/ASSETS/Golden%20Brushstroke%20Sunburst%20Halo.original.png).
+   - Generated optimized WebP equivalents (`golden_brushstroke_sunburst_halo.webp`) and fallback filenames for complete cross-platform compatibility.
+2. **Replaced Image Source in Showcase Halo:**
+   - Updated the 2-tier dual halo in `.showcase-visual` to use `ASSETS/Golden%20Brushstroke%20Sunburst%20Halo.png` across:
+     - [`hero.html`](file:///d:/botany/chipico/CHIPCA%20SITE/hero.html)
+     - [`Chipca site 1.html`](file:///d:/botany/chipico/CHIPCA%20SITE/Chipca%20site%201.html)
+     - [`index.html`](file:///d:/botany/chipico/CHIPCA%20SITE/index.html)
+3. **Preserved Dynamic 2-Tier Architecture & Flavor Theming:**
+   - Maintained outer layer ($1.12\times$, $48\text{s}$ rotation) and inner layer ($0.84\times$, $18^\circ$ offset, $38\text{s}$ counter-rotation).
+   - Retained dynamic flavor CSS color filter shifts (Classic banana gold, Robusta sage green, Taro coastal teal, Masala fiery red, Single Stick matchstick amber).
+   - Retained the elastic "raise from behind & rotate" entrance animation on product transitions.
+4. **Verification & Deployment:**
+   - Verified JavaScript syntax across all files (`0 syntax errors`).
+   - Committed and pushed to GitHub branch `exp`.
+
+
+
