@@ -1048,3 +1048,22 @@ The packet textures are configured in JavaScript inside [`hero.html`](file:///d:
 4. **Multi-File Synchronization:**
    - Synchronized changes across [`index.html`](file:///d:/botany/chipico/CHIPCA%20SITE/index.html), [`hero.html`](file:///d:/botany/chipico/CHIPCA%20SITE/hero.html), and [`Chipca site 1.html`](file:///d:/botany/chipico/CHIPCA%20SITE/Chipca%20site%201.html).
    - Validated syntax in Node.js (0 errors).
+
+
+---
+
+### Turn 36
+
+**User:**
+> remove that newly adde desigin for the product packet
+
+**Assistant:**
+#### Changes Made:
+1. **Removed Newly Added Design for Product Packet:**
+   - Completely removed all newly added designs (burst rays, rotating sunbursts, and halo elements) behind the product packet in the Product Showcase across [`index.html`](file:///d:/botany/chipico/CHIPCA%20SITE/index.html), [`hero.html`](file:///d:/botany/chipico/CHIPCA%20SITE/hero.html), and [`Chipca site 1.html`](file:///d:/botany/chipico/CHIPCA%20SITE/Chipca%20site%201.html).
+   - Restored the clean, classic 2-column Product Showcase layout with the pristine product packet and subtle floor shadow on the clean background.
+2. **Preserved Standalone Assets & Files:**
+   - Kept all extracted asset folders in [`ASSETS/chipca/`](file:///d:/botany/chipico/CHIPCA%20SITE/ASSETS/chipca/) and all files in `product animation/` safe and intact on disk.
+3. **Verification & Testing:**
+   - Verified JavaScript syntax across all HTML files with Node.js (0 syntax errors).
+   - Committed and pushed cleanly to branch `exp` on GitHub.
