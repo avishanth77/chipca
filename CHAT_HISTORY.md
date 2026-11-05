@@ -743,3 +743,29 @@ The packet textures are configured in JavaScript inside [`hero.html`](file:///d:
    - Synced changes across [`hero.html`](file:///d:/botany/chipico/CHIPCA%20SITE/hero.html), [`Chipca site 1.html`](file:///d:/botany/chipico/CHIPCA%20SITE/Chipca%20site%201.html), and [`index.html`](file:///d:/botany/chipico/CHIPCA%20SITE/index.html).
    - Verified JavaScript syntax with Node.js parser (`0 syntax errors`).
    - Committed and pushed to GitHub branch `exp`.
+
+
+---
+
+### Turn 25
+
+**User:**
+> make the pack size chaging option smaller dont use Bondrians in the product card
+
+**Assistant:**
+#### Changes Made:
+1. **Replaced Bondrians Font in Product Cards:**
+   - Changed `.card-title` font family from `'Bondrians', 'Bebas Neue', 'Bricolage Grotesque', sans-serif` to clean, modern `'Poppins', sans-serif`.
+   - Set font-weight to `600`, font-size to `1.15rem`, line-height to `1.25`, and removed the forced uppercase transformation (`text-transform: none`) so snack names render with elegant, legible title casing matching modern DTC packaging.
+
+2. **Made Pack Size Selector Significantly More Compact:**
+   - Reduced pill vertical padding by 50% from `7px 0` to `3.5px 0`.
+   - Reduced pill font size from `.78rem` to `.72rem` and pill border radius from `8px` to `6px`.
+   - Reduced grid gap between pills from `6px` to `4px`.
+   - Reduced the "Pack Size" label font size to `.64rem` with warm muted tone `#948777`.
+   - Tightened vertical spacing across `.card-weight-selector` (`margin-top: 6px`, `gap: 4px`) and `.card-price-row` (`margin: 8px 0 12px`).
+
+3. **Multi-File Synchronization & Syntax Verification:**
+   - Ensured exact 100% byte-for-byte synchronization across [`hero.html`](file:///d:/botany/chipico/CHIPCA%20SITE/hero.html), [`Chipca site 1.html`](file:///d:/botany/chipico/CHIPCA%20SITE/Chipca%20site%201.html), and [`index.html`](file:///d:/botany/chipico/CHIPCA%20SITE/index.html).
+   - Verified JavaScript syntax with Node.js parser (`0 syntax errors`).
+   - Committed and pushed to GitHub branch `exp`.
