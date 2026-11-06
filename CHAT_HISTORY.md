@@ -1107,3 +1107,44 @@ The packet textures are configured in JavaScript inside [`hero.html`](file:///d:
    - Refined mobile side arrow padding so they frame the packet cleanly without touching or overlapping.
 3. **Verification:**
    - Verified JavaScript syntax across all files with Node.js (0 errors).
+
+
+---
+
+### Turn 39
+
+**User:**
+> Classic chip
+> 150g ₹ 99
+> 250g ₹ 149
+> 500g ₹ 299
+> 
+> Taro
+> 150g ₹ 249
+> 250g ₹ 349
+> 500g ₹ 599
+> 
+> Robusta
+> 150g ₹ 149
+> 250g ₹ 249
+> 500g ₹ 449
+> 
+> Masala
+> 150g ₹ 149
+> 250g ₹ 249
+> 500g ₹ 399
+> MAKE THIS PRICE TO THE PRODUCTS
+
+**Assistant:**
+#### Changes Made:
+1. **Updated Product Variants & Pricing in `SHOP_ITEMS`:**
+   - **Classic Banana Chips:** 150g: ₹99, 250g: ₹149, 500g: ₹299
+   - **Robusta Banana Chips:** 150g: ₹149, 250g: ₹249, 500g: ₹449
+   - **Heritage Taro Chips:** 150g: ₹249, 250g: ₹349, 500g: ₹599
+   - **Masala Banana Chips:** 150g: ₹149, 250g: ₹249, 500g: ₹399
+   - **Single Stick Chips:** 150g: ₹110, 250g: ₹175, 500g: ₹340 (preserved)
+2. **Synchronized Across All Workspace HTML Files:**
+   - Updated [`index.html`](file:///d:/botany/chipico/CHIPCA%20SITE/index.html), [`hero.html`](file:///d:/botany/chipico/CHIPCA%20SITE/hero.html), and [`Chipca site 1.html`](file:///d:/botany/chipico/CHIPCA%20SITE/Chipca%20site%201.html).
+   - Validated syntax in Node.js (0 errors).
+3. **Committed & Pushed to Remote:**
+   - Staged all modified files, committed, and pushed cleanly to branch `exp` on GitHub.
