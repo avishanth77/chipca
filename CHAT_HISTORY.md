@@ -1084,3 +1084,26 @@ The packet textures are configured in JavaScript inside [`hero.html`](file:///d:
 2. **Git Commit & Push:**
    - Staged [`index.html`](file:///d:/botany/chipico/CHIPCA%20SITE/index.html) and [`CHAT_HISTORY.md`](file:///d:/botany/chipico/CHIPCA%20SITE/CHAT_HISTORY.md).
    - Committed and pushed changes cleanly to branch `exp` on GitHub.
+
+
+---
+
+### Turn 38
+
+**User:**
+> reduse the size of pakects in the 2nd page only in mobile screen in this screen shot the packet so big make it samll according to the screen
+
+**Assistant:**
+#### Changes Made:
+1. **Scaled Down Product Packet Exclusively on Mobile Screens:**
+   - Updated responsive CSS for `.showcase-img` in [`index.html`](file:///d:/botany/chipico/CHIPCA%20SITE/index.html), [`hero.html`](file:///d:/botany/chipico/CHIPCA%20SITE/hero.html), and [`Chipca site 1.html`](file:///d:/botany/chipico/CHIPCA%20SITE/Chipca%20site%201.html):
+     - **Tablets (`<= 860px`):** Scaled from static 440px down to `max-height: clamp(280px, 40vh, 340px)`.
+     - **Phones (`<= 600px`):** Scaled down to `max-height: clamp(210px, 30vh, 260px)` and `max-width: min(200px, 56vw)`.
+     - **Small Phones (`<= 400px`):** Scaled down to `max-height: clamp(185px, 27vh, 225px)` and `max-width: min(170px, 52vw)`.
+     - **Desktop (`> 860px`):** Kept 100% untouched at full size.
+2. **Proportional Ray Burst & Shadow Scaling:**
+   - Adjusted `.showcase-floor-shadow` width and height proportionally on mobile.
+   - Wired `layoutRays()` to automatically recalculate on flavor updates and window resize, scaling the background ray burst SVG down in exact proportion to the packet.
+   - Refined mobile side arrow padding so they frame the packet cleanly without touching or overlapping.
+3. **Verification:**
+   - Verified JavaScript syntax across all files with Node.js (0 errors).
