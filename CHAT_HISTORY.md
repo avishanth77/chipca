@@ -1148,3 +1148,31 @@ The packet textures are configured in JavaScript inside [`hero.html`](file:///d:
    - Validated syntax in Node.js (0 errors).
 3. **Committed & Pushed to Remote:**
    - Staged all modified files, committed, and pushed cleanly to branch `exp` on GitHub.
+
+
+---
+
+### Turn 40
+
+**User:**
+> https://github.com/sickn33/agentic-awesome-skills use this skill and make this web site seo friently
+
+**Assistant:**
+#### Changes Made:
+1. **Implemented Skills from `sickn33/agentic-awesome-skills`:**
+   - **`ai-seo` (AEO / GEO Optimization):** Optimized for Google AI Overviews, Perplexity, ChatGPT Search, and Claude by creating citable, authoritative, structured content with dedicated FAQ answer blocks.
+   - **`ai-meta-tag-writer` & `title-meta-length-counter`:** Title crafted at 57 characters (`Chipca | Authentic Kerala Banana Chips & Artisan Snacks`) and Meta Description at 152 characters to avoid SERP pixel truncation while maximizing click-through rates.
+   - **`social-metadata-hardening`:** Enforced complete Open Graph and Twitter Card tags (`summary_large_image`) with absolute HTTPS image URLs, image dimensions (1200x630), and fallback metadata for social sharing on WhatsApp, iMessage, Facebook, and Twitter.
+   - **`ai-schema-markup-generator`:** Injected a unified Schema.org JSON-LD graph containing `Organization`, `WebSite`, `BreadcrumbList`, 5x `Product` schemas with AggregateOffers matching current product prices, and `FAQPage`.
+   - **`sitemap-generator`:** Generated valid `sitemap.xml` with Google image extensions for all 5 product packages.
+2. **Search Engine & AI Directives (`robots.txt`):**
+   - Created root [`robots.txt`](file:///d:/botany/chipico/CHIPCA%20SITE/robots.txt) explicitly welcoming search crawlers (Googlebot, Bingbot, Applebot, DuckDuckBot) and AI crawlers (`OAI-SearchBot`, `ChatGPT-User`, `PerplexityBot`, `ClaudeBot`, `anthropic-ai`) while linking to [`sitemap.xml`](file:///d:/botany/chipico/CHIPCA%20SITE/sitemap.xml).
+3. **On-Page Extractable Content & Navigation:**
+   - Injected semantic, accessible FAQ section (`#faq`) with native `<details>`/`<summary>` accordion and smooth toggle styling.
+   - Added FAQ links across Desktop Navbar, Mobile Navigation Drawer, and Footer.
+   - Added screen-reader helper `<span class="sr-only">Chipca Authentic Kerala Banana Chips & Artisan Snacks</span>` to Hero `<h1>` for immediate search engine topical clarity.
+4. **Synchronized Across All Workspace HTML Files:**
+   - Updated [`index.html`](file:///d:/botany/chipico/CHIPCA%20SITE/index.html), [`hero.html`](file:///d:/botany/chipico/CHIPCA%20SITE/hero.html), and [`Chipca site 1.html`](file:///d:/botany/chipico/CHIPCA%20SITE/Chipca%20site%201.html).
+   - Validated JSON-LD schemas and JavaScript syntax across all files (0 errors).
+5. **Committed & Pushed to Remote:**
+   - Staged all files, committed, and pushed to branch `exp` on GitHub.
