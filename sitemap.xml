@@ -7,27 +7,27 @@
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
     <image:image>
-      <image:loc>https://chipca.com/assets/images/products/classic.png</image:loc>
+      <image:loc>https://chipca.com/classic.png</image:loc>
       <image:title>Chipca Classic Banana Chips</image:title>
       <image:caption>Authentic Kerala banana chips batch-fried in 100% pure coconut oil</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://chipca.com/assets/images/products/robusta.png</image:loc>
+      <image:loc>https://chipca.com/robusta.png</image:loc>
       <image:title>Chipca Robusta Banana Chips</image:title>
       <image:caption>Delicately crisp Robusta banana chips fried in coconut oil</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://chipca.com/assets/images/products/taro.png</image:loc>
+      <image:loc>https://chipca.com/taro.png</image:loc>
       <image:title>Chipca Heritage Taro Chips</image:title>
       <image:caption>Wafer-thin crunchy Taro root chips sprinkled with sea salt</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://chipca.com/assets/images/products/masala.png</image:loc>
+      <image:loc>https://chipca.com/masala.png</image:loc>
       <image:title>Chipca Masala Banana Chips</image:title>
       <image:caption>Zesty Kerala banana chips tossed in Malabar roasted spices</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://chipca.com/assets/images/products/stick.png</image:loc>
+      <image:loc>https://chipca.com/stick.png</image:loc>
       <image:title>Chipca Single Stick Banana Chips</image:title>
       <image:caption>Artisanal matchstick cut banana chips for an intense crunch</image:caption>
     </image:image>

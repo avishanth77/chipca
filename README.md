@@ -22,10 +22,6 @@ An interactive, responsive 3D web experience built with **Three.js**, dynamic th
   - Quick links, customer support & bulk inquiry triggers.
   - Interactive newsletter subscription pill form.
   - Social media and legal terms links.
-- **Search & AI Optimization (AEO / GEO):**
-  - Schema.org JSON-LD structured data graph (`Organization`, `WebSite`, `BreadcrumbList`, `Product` schemas with AggregateOffers, and `FAQPage`).
-  - Search crawler directives via `robots.txt` and XML image `sitemap.xml`.
-  - Accessible, on-page FAQ accordion section for AI citation engines.
 
 ---
 
@@ -39,49 +35,24 @@ Open [`index.html`](index.html) or host on GitHub Pages:
 ## 📁 Project Structure
 
 ```
-├── index.html                           # Main entry point (Production website)
-├── robots.txt                           # Search & AI crawler directives
-├── sitemap.xml                          # XML Sitemap with Google image extensions
-├── README.md                            # Documentation
+├── index.html                           # Main entry point (GitHub Pages ready)
+├── hero.html                            # Landing page codebase
+├── Chipca site 1.html                   # Mirrored production site
 ├── CHAT_HISTORY.md                      # Complete turn-by-turn development log
-├── .gitignore                           # Git ignore configuration
-│
-├── assets/                              # Consolidated static assets
-│   ├── images/
-│   │   ├── products/                    # High-res packet cutouts (PNG & WebP)
-│   │   │   ├── classic.png / .webp
-│   │   │   ├── robusta.png / .webp
-│   │   │   ├── taro.png / .webp
-│   │   │   ├── masala.png / .webp
-│   │   │   └── stick.png / .webp
-│   │   └── branding/                    # Brand wordmark and logos
-│   │       ├── chipca_logo_white.png / .webp
-│   │       └── chipca_logo_dark.png / .webp
-│   ├── icons/                           # 14 Nutritional & flavour benefit icons
-│   │   ├── 100_coconut_oil.png
-│   │   ├── 100_natural_spices.png
-│   │   ├── artisanal_matchstick_cut.png
-│   │   └── ...
-│   └── burst/                           # Burst animation SVG rays & config
-│       ├── burst-config.js
-│       ├── burst-config.json
-│       ├── classic/
-│       ├── robusta/
-│       ├── taro/
-│       ├── masala/
-│       └── single/
-│
-└── archive/                             # Archived and reference files
-    ├── demos/                           # Interactive 3D & burst reference demos
-    │   ├── Chipca Classic Chips – 3D Spin (1).html
-    │   ├── chipca_animation.html
-    │   └── ...
-    └── legacy/                          # Earlier version site backups
-        ├── hero.html
-        ├── Chipca site 1.html
-        └── Chipca site 1.original.html
+├── chips_benefit_icons/                 # Nutritional & benefit PNG icons
+│   ├── chips_natural_crisp_icon.png
+│   ├── kerala_taste_icon.png
+│   ├── no_preservatives_icon.png
+│   └── tea_time_snack_icon.png
+├── classic.png / classic.webp           # Classic Banana Chips packet
+├── robusta.png / robusta.webp           # Robusta Banana Chips packet
+├── taro.png / taro.webp                 # Heritage Taro Chips packet
+├── masala.png / masala.webp             # Masala Banana Chips packet
+├── stick.png / stick.webp               # Single Stick Cut Chips packet
+└── README.md                            # Documentation
 ```
 
 ---
 
 © 2026 Chipca Foods. All rights reserved.
+

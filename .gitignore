@@ -8,5 +8,11 @@ desktop.ini
 *.temp
 __pycache__/
 *.pyc
-*.py
-!safe_organize.py
+update_nav_and_swipe.py
+apply_cart_update.py
+add_footer.py
+repair_site.py
+Chipca Classic Chips – 3D Spin (1).html
+Chipca site 1.html
+Chipca site 1.original.html
+hero.html

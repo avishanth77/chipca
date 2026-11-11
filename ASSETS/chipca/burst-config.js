@@ -1,4 +1,4 @@
-[
+const CHIPCA_BURST_CONFIG = [
   {
     "id": "classic",
     "name": "Classic Chips",
@@ -7,7 +7,7 @@
     "buyUrl": "#card-classic",
     "buyLabel": "Shop This Flavour \u2192",
     "bag": {
-      "src": "assets/burst/classic/bag.webp",
+      "src": "ASSETS/chipca/classic/bag.webp",
       "x": 315,
       "y": 409,
       "width": 770,
@@ -22,7 +22,7 @@
     },
     "rays": [
       {
-        "src": "assets/burst/classic/ray-01.webp",
+        "src": "ASSETS/chipca/classic/ray-01.webp",
         "x": 753,
         "y": 187,
         "width": 216,
@@ -33,7 +33,7 @@
         "r": "18deg"
       },
       {
-        "src": "assets/burst/classic/ray-02.webp",
+        "src": "ASSETS/chipca/classic/ray-02.webp",
         "x": 816,
         "y": 180,
         "width": 334,
@@ -44,7 +44,7 @@
         "r": "-18deg"
       },
       {
-        "src": "assets/burst/classic/ray-03.webp",
+        "src": "ASSETS/chipca/classic/ray-03.webp",
         "x": 925,
         "y": 345,
         "width": 413,
@@ -55,7 +55,7 @@
         "r": "18deg"
       },
       {
-        "src": "assets/burst/classic/ray-04.webp",
+        "src": "ASSETS/chipca/classic/ray-04.webp",
         "x": 948,
         "y": 422,
         "width": 441,
@@ -66,7 +66,7 @@
         "r": "-18deg"
       },
       {
-        "src": "assets/burst/classic/ray-05.webp",
+        "src": "ASSETS/chipca/classic/ray-05.webp",
         "x": 991,
         "y": 700,
         "width": 372,
@@ -77,7 +77,7 @@
         "r": "18deg"
       },
       {
-        "src": "assets/burst/classic/ray-06.webp",
+        "src": "ASSETS/chipca/classic/ray-06.webp",
         "x": 1018,
         "y": 873,
         "width": 319,
@@ -88,7 +88,7 @@
         "r": "-18deg"
       },
       {
-        "src": "assets/burst/classic/ray-07.webp",
+        "src": "ASSETS/chipca/classic/ray-07.webp",
         "x": 970,
         "y": 989,
         "width": 420,
@@ -99,7 +99,7 @@
         "r": "18deg"
       },
       {
-        "src": "assets/burst/classic/ray-08.webp",
+        "src": "ASSETS/chipca/classic/ray-08.webp",
         "x": 943,
         "y": 1091,
         "width": 286,
@@ -110,7 +110,7 @@
         "r": "-18deg"
       },
       {
-        "src": "assets/burst/classic/ray-09.webp",
+        "src": "ASSETS/chipca/classic/ray-09.webp",
         "x": 856,
         "y": 1156,
         "width": 311,
@@ -121,7 +121,7 @@
         "r": "18deg"
       },
       {
-        "src": "assets/burst/classic/ray-10.webp",
+        "src": "ASSETS/chipca/classic/ray-10.webp",
         "x": 769,
         "y": 1192,
         "width": 252,
@@ -132,7 +132,7 @@
         "r": "-18deg"
       },
       {
-        "src": "assets/burst/classic/ray-11.webp",
+        "src": "ASSETS/chipca/classic/ray-11.webp",
         "x": 644,
         "y": 1237,
         "width": 180,
@@ -143,7 +143,7 @@
         "r": "18deg"
       },
       {
-        "src": "assets/burst/classic/ray-12.webp",
+        "src": "ASSETS/chipca/classic/ray-12.webp",
         "x": 452,
         "y": 1195,
         "width": 220,
@@ -154,7 +154,7 @@
         "r": "-18deg"
       },
       {
-        "src": "assets/burst/classic/ray-13.webp",
+        "src": "ASSETS/chipca/classic/ray-13.webp",
         "x": 213,
         "y": 1165,
         "width": 357,
@@ -165,7 +165,7 @@
         "r": "18deg"
       },
       {
-        "src": "assets/burst/classic/ray-14.webp",
+        "src": "ASSETS/chipca/classic/ray-14.webp",
         "x": 139,
         "y": 1106,
         "width": 344,
@@ -176,7 +176,7 @@
         "r": "-18deg"
       },
       {
-        "src": "assets/burst/classic/ray-15.webp",
+        "src": "ASSETS/chipca/classic/ray-15.webp",
         "x": 116,
         "y": 1049,
         "width": 317,
@@ -187,7 +187,7 @@
         "r": "18deg"
       },
       {
-        "src": "assets/burst/classic/ray-16.webp",
+        "src": "ASSETS/chipca/classic/ray-16.webp",
         "x": 0,
         "y": 936,
         "width": 385,
@@ -198,7 +198,7 @@
         "r": "-18deg"
       },
       {
-        "src": "assets/burst/classic/ray-17.webp",
+        "src": "ASSETS/chipca/classic/ray-17.webp",
         "x": 37,
         "y": 801,
         "width": 361,
@@ -209,7 +209,7 @@
         "r": "18deg"
       },
       {
-        "src": "assets/burst/classic/ray-18.webp",
+        "src": "ASSETS/chipca/classic/ray-18.webp",
         "x": 0,
         "y": 551,
         "width": 400,
@@ -220,7 +220,7 @@
         "r": "-18deg"
       },
       {
-        "src": "assets/burst/classic/ray-19.webp",
+        "src": "ASSETS/chipca/classic/ray-19.webp",
         "x": 135,
         "y": 394,
         "width": 336,
@@ -231,7 +231,7 @@
         "r": "18deg"
       },
       {
-        "src": "assets/burst/classic/ray-20.webp",
+        "src": "ASSETS/chipca/classic/ray-20.webp",
         "x": 271,
         "y": 396,
         "width": 262,
@@ -242,7 +242,7 @@
         "r": "-18deg"
       },
       {
-        "src": "assets/burst/classic/ray-21.webp",
+        "src": "ASSETS/chipca/classic/ray-21.webp",
         "x": 416,
         "y": 271,
         "width": 224,
@@ -253,7 +253,7 @@
         "r": "18deg"
       },
       {
-        "src": "assets/burst/classic/ray-22.webp",
+        "src": "ASSETS/chipca/classic/ray-22.webp",
         "x": 588,
         "y": 248,
         "width": 152,
@@ -273,7 +273,7 @@
     "buyUrl": "#card-stick",
     "buyLabel": "Shop This Flavour \u2192",
     "bag": {
-      "src": "assets/burst/single/bag.webp",
+      "src": "ASSETS/chipca/single/bag.webp",
       "x": 315,
       "y": 409,
       "width": 770,
@@ -288,7 +288,7 @@
     },
     "rays": [
       {
-        "src": "assets/burst/single/ray-01.webp",
+        "src": "ASSETS/chipca/single/ray-01.webp",
         "x": 753,
         "y": 187,
         "width": 216,
@@ -299,7 +299,7 @@
         "r": "18deg"
       },
       {
-        "src": "assets/burst/single/ray-02.webp",
+        "src": "ASSETS/chipca/single/ray-02.webp",
         "x": 816,
         "y": 180,
         "width": 334,
@@ -310,7 +310,7 @@
         "r": "-18deg"
       },
       {
-        "src": "assets/burst/single/ray-03.webp",
+        "src": "ASSETS/chipca/single/ray-03.webp",
         "x": 925,
         "y": 345,
         "width": 413,
@@ -321,7 +321,7 @@
         "r": "18deg"
       },
       {
-        "src": "assets/burst/single/ray-04.webp",
+        "src": "ASSETS/chipca/single/ray-04.webp",
         "x": 948,
         "y": 422,
         "width": 441,
@@ -332,7 +332,7 @@
         "r": "-18deg"
       },
       {
-        "src": "assets/burst/single/ray-05.webp",
+        "src": "ASSETS/chipca/single/ray-05.webp",
         "x": 991,
         "y": 700,
         "width": 372,
@@ -343,7 +343,7 @@
         "r": "18deg"
       },
       {
-        "src": "assets/burst/single/ray-06.webp",
+        "src": "ASSETS/chipca/single/ray-06.webp",
         "x": 1018,
         "y": 873,
         "width": 319,
@@ -354,7 +354,7 @@
         "r": "-18deg"
       },
       {
-        "src": "assets/burst/single/ray-07.webp",
+        "src": "ASSETS/chipca/single/ray-07.webp",
         "x": 970,
         "y": 989,
         "width": 420,
@@ -365,7 +365,7 @@
         "r": "18deg"
       },
       {
-        "src": "assets/burst/single/ray-08.webp",
+        "src": "ASSETS/chipca/single/ray-08.webp",
         "x": 943,
         "y": 1091,
         "width": 286,
@@ -376,7 +376,7 @@
         "r": "-18deg"
       },
       {
-        "src": "assets/burst/single/ray-09.webp",
+        "src": "ASSETS/chipca/single/ray-09.webp",
         "x": 856,
         "y": 1156,
         "width": 311,
@@ -387,7 +387,7 @@
         "r": "18deg"
       },
       {
-        "src": "assets/burst/single/ray-10.webp",
+        "src": "ASSETS/chipca/single/ray-10.webp",
         "x": 769,
         "y": 1192,
         "width": 252,
@@ -398,7 +398,7 @@
         "r": "-18deg"
       },
       {
-        "src": "assets/burst/single/ray-11.webp",
+        "src": "ASSETS/chipca/single/ray-11.webp",
         "x": 644,
         "y": 1237,
         "width": 180,
@@ -409,7 +409,7 @@
         "r": "18deg"
       },
       {
-        "src": "assets/burst/single/ray-12.webp",
+        "src": "ASSETS/chipca/single/ray-12.webp",
         "x": 452,
         "y": 1195,
         "width": 220,
@@ -420,7 +420,7 @@
         "r": "-18deg"
       },
       {
-        "src": "assets/burst/single/ray-13.webp",
+        "src": "ASSETS/chipca/single/ray-13.webp",
         "x": 213,
         "y": 1165,
         "width": 357,
@@ -431,7 +431,7 @@
         "r": "18deg"
       },
       {
-        "src": "assets/burst/single/ray-14.webp",
+        "src": "ASSETS/chipca/single/ray-14.webp",
         "x": 139,
         "y": 1106,
         "width": 344,
@@ -442,7 +442,7 @@
         "r": "-18deg"
       },
       {
-        "src": "assets/burst/single/ray-15.webp",
+        "src": "ASSETS/chipca/single/ray-15.webp",
         "x": 116,
         "y": 1049,
         "width": 317,
@@ -453,7 +453,7 @@
         "r": "18deg"
       },
       {
-        "src": "assets/burst/single/ray-16.webp",
+        "src": "ASSETS/chipca/single/ray-16.webp",
         "x": 0,
         "y": 936,
         "width": 385,
@@ -464,7 +464,7 @@
         "r": "-18deg"
       },
       {
-        "src": "assets/burst/single/ray-17.webp",
+        "src": "ASSETS/chipca/single/ray-17.webp",
         "x": 37,
         "y": 801,
         "width": 361,
@@ -475,7 +475,7 @@
         "r": "18deg"
       },
       {
-        "src": "assets/burst/single/ray-18.webp",
+        "src": "ASSETS/chipca/single/ray-18.webp",
         "x": 0,
         "y": 551,
         "width": 400,
@@ -486,7 +486,7 @@
         "r": "-18deg"
       },
       {
-        "src": "assets/burst/single/ray-19.webp",
+        "src": "ASSETS/chipca/single/ray-19.webp",
         "x": 135,
         "y": 394,
         "width": 336,
@@ -497,7 +497,7 @@
         "r": "18deg"
       },
       {
-        "src": "assets/burst/single/ray-20.webp",
+        "src": "ASSETS/chipca/single/ray-20.webp",
         "x": 271,
         "y": 396,
         "width": 262,
@@ -508,7 +508,7 @@
         "r": "-18deg"
       },
       {
-        "src": "assets/burst/single/ray-21.webp",
+        "src": "ASSETS/chipca/single/ray-21.webp",
         "x": 416,
         "y": 271,
         "width": 224,
@@ -519,7 +519,7 @@
         "r": "18deg"
       },
       {
-        "src": "assets/burst/single/ray-22.webp",
+        "src": "ASSETS/chipca/single/ray-22.webp",
         "x": 588,
         "y": 248,
         "width": 152,
@@ -539,7 +539,7 @@
     "buyUrl": "#card-taro",
     "buyLabel": "Shop This Flavour \u2192",
     "bag": {
-      "src": "assets/burst/taro/bag.webp",
+      "src": "ASSETS/chipca/taro/bag.webp",
       "x": 315,
       "y": 408,
       "width": 770,
@@ -554,7 +554,7 @@
     },
     "rays": [
       {
-        "src": "assets/burst/taro/ray-01.webp",
+        "src": "ASSETS/chipca/taro/ray-01.webp",
         "x": 753,
         "y": 187,
         "width": 216,
@@ -565,7 +565,7 @@
         "r": "18deg"
       },
       {
-        "src": "assets/burst/taro/ray-02.webp",
+        "src": "ASSETS/chipca/taro/ray-02.webp",
         "x": 816,
         "y": 180,
         "width": 334,
@@ -576,7 +576,7 @@
         "r": "-18deg"
       },
       {
-        "src": "assets/burst/taro/ray-03.webp",
+        "src": "ASSETS/chipca/taro/ray-03.webp",
         "x": 925,
         "y": 345,
         "width": 413,
@@ -587,7 +587,7 @@
         "r": "18deg"
       },
       {
-        "src": "assets/burst/taro/ray-04.webp",
+        "src": "ASSETS/chipca/taro/ray-04.webp",
         "x": 948,
         "y": 422,
         "width": 441,
@@ -598,7 +598,7 @@
         "r": "-18deg"
       },
       {
-        "src": "assets/burst/taro/ray-05.webp",
+        "src": "ASSETS/chipca/taro/ray-05.webp",
         "x": 991,
         "y": 700,
         "width": 372,
@@ -609,7 +609,7 @@
         "r": "18deg"
       },
       {
-        "src": "assets/burst/taro/ray-06.webp",
+        "src": "ASSETS/chipca/taro/ray-06.webp",
         "x": 1018,
         "y": 873,
         "width": 319,
@@ -620,7 +620,7 @@
         "r": "-18deg"
       },
       {
-        "src": "assets/burst/taro/ray-07.webp",
+        "src": "ASSETS/chipca/taro/ray-07.webp",
         "x": 970,
         "y": 989,
         "width": 420,
@@ -631,7 +631,7 @@
         "r": "18deg"
       },
       {
-        "src": "assets/burst/taro/ray-08.webp",
+        "src": "ASSETS/chipca/taro/ray-08.webp",
         "x": 943,
         "y": 1091,
         "width": 286,
@@ -642,7 +642,7 @@
         "r": "-18deg"
       },
       {
-        "src": "assets/burst/taro/ray-09.webp",
+        "src": "ASSETS/chipca/taro/ray-09.webp",
         "x": 856,
         "y": 1156,
         "width": 311,
@@ -653,7 +653,7 @@
         "r": "18deg"
       },
       {
-        "src": "assets/burst/taro/ray-10.webp",
+        "src": "ASSETS/chipca/taro/ray-10.webp",
         "x": 769,
         "y": 1192,
         "width": 252,
@@ -664,7 +664,7 @@
         "r": "-18deg"
       },
       {
-        "src": "assets/burst/taro/ray-11.webp",
+        "src": "ASSETS/chipca/taro/ray-11.webp",
         "x": 644,
         "y": 1237,
         "width": 180,
@@ -675,7 +675,7 @@
         "r": "18deg"
       },
       {
-        "src": "assets/burst/taro/ray-12.webp",
+        "src": "ASSETS/chipca/taro/ray-12.webp",
         "x": 452,
         "y": 1195,
         "width": 220,
@@ -686,7 +686,7 @@
         "r": "-18deg"
       },
       {
-        "src": "assets/burst/taro/ray-13.webp",
+        "src": "ASSETS/chipca/taro/ray-13.webp",
         "x": 213,
         "y": 1165,
         "width": 357,
@@ -697,7 +697,7 @@
         "r": "18deg"
       },
       {
-        "src": "assets/burst/taro/ray-14.webp",
+        "src": "ASSETS/chipca/taro/ray-14.webp",
         "x": 139,
         "y": 1106,
         "width": 344,
@@ -708,7 +708,7 @@
         "r": "-18deg"
       },
       {
-        "src": "assets/burst/taro/ray-15.webp",
+        "src": "ASSETS/chipca/taro/ray-15.webp",
         "x": 116,
         "y": 1049,
         "width": 317,
@@ -719,7 +719,7 @@
         "r": "18deg"
       },
       {
-        "src": "assets/burst/taro/ray-16.webp",
+        "src": "ASSETS/chipca/taro/ray-16.webp",
         "x": 0,
         "y": 936,
         "width": 385,
@@ -730,7 +730,7 @@
         "r": "-18deg"
       },
       {
-        "src": "assets/burst/taro/ray-17.webp",
+        "src": "ASSETS/chipca/taro/ray-17.webp",
         "x": 37,
         "y": 801,
         "width": 361,
@@ -741,7 +741,7 @@
         "r": "18deg"
       },
       {
-        "src": "assets/burst/taro/ray-18.webp",
+        "src": "ASSETS/chipca/taro/ray-18.webp",
         "x": 0,
         "y": 551,
         "width": 400,
@@ -752,7 +752,7 @@
         "r": "-18deg"
       },
       {
-        "src": "assets/burst/taro/ray-19.webp",
+        "src": "ASSETS/chipca/taro/ray-19.webp",
         "x": 135,
         "y": 394,
         "width": 336,
@@ -763,7 +763,7 @@
         "r": "18deg"
       },
       {
-        "src": "assets/burst/taro/ray-20.webp",
+        "src": "ASSETS/chipca/taro/ray-20.webp",
         "x": 271,
         "y": 396,
         "width": 262,
@@ -774,7 +774,7 @@
         "r": "-18deg"
       },
       {
-        "src": "assets/burst/taro/ray-21.webp",
+        "src": "ASSETS/chipca/taro/ray-21.webp",
         "x": 416,
         "y": 271,
         "width": 224,
@@ -785,7 +785,7 @@
         "r": "18deg"
       },
       {
-        "src": "assets/burst/taro/ray-22.webp",
+        "src": "ASSETS/chipca/taro/ray-22.webp",
         "x": 588,
         "y": 248,
         "width": 152,
@@ -805,7 +805,7 @@
     "buyUrl": "#card-masala",
     "buyLabel": "Shop This Flavour \u2192",
     "bag": {
-      "src": "assets/burst/masala/bag.webp",
+      "src": "ASSETS/chipca/masala/bag.webp",
       "x": 315,
       "y": 408,
       "width": 770,
@@ -820,7 +820,7 @@
     },
     "rays": [
       {
-        "src": "assets/burst/masala/ray-01.webp",
+        "src": "ASSETS/chipca/masala/ray-01.webp",
         "x": 753,
         "y": 187,
         "width": 216,
@@ -831,7 +831,7 @@
         "r": "18deg"
       },
       {
-        "src": "assets/burst/masala/ray-02.webp",
+        "src": "ASSETS/chipca/masala/ray-02.webp",
         "x": 816,
         "y": 180,
         "width": 334,
@@ -842,7 +842,7 @@
         "r": "-18deg"
       },
       {
-        "src": "assets/burst/masala/ray-03.webp",
+        "src": "ASSETS/chipca/masala/ray-03.webp",
         "x": 925,
         "y": 345,
         "width": 413,
@@ -853,7 +853,7 @@
         "r": "18deg"
       },
       {
-        "src": "assets/burst/masala/ray-04.webp",
+        "src": "ASSETS/chipca/masala/ray-04.webp",
         "x": 948,
         "y": 422,
         "width": 441,
@@ -864,7 +864,7 @@
         "r": "-18deg"
       },
       {
-        "src": "assets/burst/masala/ray-05.webp",
+        "src": "ASSETS/chipca/masala/ray-05.webp",
         "x": 991,
         "y": 700,
         "width": 372,
@@ -875,7 +875,7 @@
         "r": "18deg"
       },
       {
-        "src": "assets/burst/masala/ray-06.webp",
+        "src": "ASSETS/chipca/masala/ray-06.webp",
         "x": 1018,
         "y": 873,
         "width": 319,
@@ -886,7 +886,7 @@
         "r": "-18deg"
       },
       {
-        "src": "assets/burst/masala/ray-07.webp",
+        "src": "ASSETS/chipca/masala/ray-07.webp",
         "x": 970,
         "y": 989,
         "width": 420,
@@ -897,7 +897,7 @@
         "r": "18deg"
       },
       {
-        "src": "assets/burst/masala/ray-08.webp",
+        "src": "ASSETS/chipca/masala/ray-08.webp",
         "x": 943,
         "y": 1091,
         "width": 286,
@@ -908,7 +908,7 @@
         "r": "-18deg"
       },
       {
-        "src": "assets/burst/masala/ray-09.webp",
+        "src": "ASSETS/chipca/masala/ray-09.webp",
         "x": 856,
         "y": 1156,
         "width": 311,
@@ -919,7 +919,7 @@
         "r": "18deg"
       },
       {
-        "src": "assets/burst/masala/ray-10.webp",
+        "src": "ASSETS/chipca/masala/ray-10.webp",
         "x": 769,
         "y": 1192,
         "width": 252,
@@ -930,7 +930,7 @@
         "r": "-18deg"
       },
       {
-        "src": "assets/burst/masala/ray-11.webp",
+        "src": "ASSETS/chipca/masala/ray-11.webp",
         "x": 644,
         "y": 1237,
         "width": 180,
@@ -941,7 +941,7 @@
         "r": "18deg"
       },
       {
-        "src": "assets/burst/masala/ray-12.webp",
+        "src": "ASSETS/chipca/masala/ray-12.webp",
         "x": 452,
         "y": 1195,
         "width": 220,
@@ -952,7 +952,7 @@
         "r": "-18deg"
       },
       {
-        "src": "assets/burst/masala/ray-13.webp",
+        "src": "ASSETS/chipca/masala/ray-13.webp",
         "x": 213,
         "y": 1165,
         "width": 357,
@@ -963,7 +963,7 @@
         "r": "18deg"
       },
       {
-        "src": "assets/burst/masala/ray-14.webp",
+        "src": "ASSETS/chipca/masala/ray-14.webp",
         "x": 139,
         "y": 1106,
         "width": 344,
@@ -974,7 +974,7 @@
         "r": "-18deg"
       },
       {
-        "src": "assets/burst/masala/ray-15.webp",
+        "src": "ASSETS/chipca/masala/ray-15.webp",
         "x": 116,
         "y": 1049,
         "width": 317,
@@ -985,7 +985,7 @@
         "r": "18deg"
       },
       {
-        "src": "assets/burst/masala/ray-16.webp",
+        "src": "ASSETS/chipca/masala/ray-16.webp",
         "x": 0,
         "y": 936,
         "width": 385,
@@ -996,7 +996,7 @@
         "r": "-18deg"
       },
       {
-        "src": "assets/burst/masala/ray-17.webp",
+        "src": "ASSETS/chipca/masala/ray-17.webp",
         "x": 37,
         "y": 801,
         "width": 361,
@@ -1007,7 +1007,7 @@
         "r": "18deg"
       },
       {
-        "src": "assets/burst/masala/ray-18.webp",
+        "src": "ASSETS/chipca/masala/ray-18.webp",
         "x": 0,
         "y": 551,
         "width": 400,
@@ -1018,7 +1018,7 @@
         "r": "-18deg"
       },
       {
-        "src": "assets/burst/masala/ray-19.webp",
+        "src": "ASSETS/chipca/masala/ray-19.webp",
         "x": 135,
         "y": 394,
         "width": 336,
@@ -1029,7 +1029,7 @@
         "r": "18deg"
       },
       {
-        "src": "assets/burst/masala/ray-20.webp",
+        "src": "ASSETS/chipca/masala/ray-20.webp",
         "x": 271,
         "y": 396,
         "width": 262,
@@ -1040,7 +1040,7 @@
         "r": "-18deg"
       },
       {
-        "src": "assets/burst/masala/ray-21.webp",
+        "src": "ASSETS/chipca/masala/ray-21.webp",
         "x": 416,
         "y": 271,
         "width": 224,
@@ -1051,7 +1051,7 @@
         "r": "18deg"
       },
       {
-        "src": "assets/burst/masala/ray-22.webp",
+        "src": "ASSETS/chipca/masala/ray-22.webp",
         "x": 588,
         "y": 248,
         "width": 152,
@@ -1071,7 +1071,7 @@
     "buyUrl": "#card-robusta",
     "buyLabel": "Shop This Flavour \u2192",
     "bag": {
-      "src": "assets/burst/robusta/bag.webp",
+      "src": "ASSETS/chipca/robusta/bag.webp",
       "x": 315,
       "y": 409,
       "width": 770,
@@ -1086,7 +1086,7 @@
     },
     "rays": [
       {
-        "src": "assets/burst/robusta/ray-01.webp",
+        "src": "ASSETS/chipca/robusta/ray-01.webp",
         "x": 753,
         "y": 187,
         "width": 216,
@@ -1097,7 +1097,7 @@
         "r": "18deg"
       },
       {
-        "src": "assets/burst/robusta/ray-02.webp",
+        "src": "ASSETS/chipca/robusta/ray-02.webp",
         "x": 816,
         "y": 180,
         "width": 334,
@@ -1108,7 +1108,7 @@
         "r": "-18deg"
       },
       {
-        "src": "assets/burst/robusta/ray-03.webp",
+        "src": "ASSETS/chipca/robusta/ray-03.webp",
         "x": 925,
         "y": 345,
         "width": 413,
@@ -1119,7 +1119,7 @@
         "r": "18deg"
       },
       {
-        "src": "assets/burst/robusta/ray-04.webp",
+        "src": "ASSETS/chipca/robusta/ray-04.webp",
         "x": 948,
         "y": 422,
         "width": 441,
@@ -1130,7 +1130,7 @@
         "r": "-18deg"
       },
       {
-        "src": "assets/burst/robusta/ray-05.webp",
+        "src": "ASSETS/chipca/robusta/ray-05.webp",
         "x": 991,
         "y": 700,
         "width": 372,
@@ -1141,7 +1141,7 @@
         "r": "18deg"
       },
       {
-        "src": "assets/burst/robusta/ray-06.webp",
+        "src": "ASSETS/chipca/robusta/ray-06.webp",
         "x": 1018,
         "y": 873,
         "width": 319,
@@ -1152,7 +1152,7 @@
         "r": "-18deg"
       },
       {
-        "src": "assets/burst/robusta/ray-07.webp",
+        "src": "ASSETS/chipca/robusta/ray-07.webp",
         "x": 970,
         "y": 989,
         "width": 420,
@@ -1163,7 +1163,7 @@
         "r": "18deg"
       },
       {
-        "src": "assets/burst/robusta/ray-08.webp",
+        "src": "ASSETS/chipca/robusta/ray-08.webp",
         "x": 943,
         "y": 1091,
         "width": 286,
@@ -1174,7 +1174,7 @@
         "r": "-18deg"
       },
       {
-        "src": "assets/burst/robusta/ray-09.webp",
+        "src": "ASSETS/chipca/robusta/ray-09.webp",
         "x": 856,
         "y": 1156,
         "width": 311,
@@ -1185,7 +1185,7 @@
         "r": "18deg"
       },
       {
-        "src": "assets/burst/robusta/ray-10.webp",
+        "src": "ASSETS/chipca/robusta/ray-10.webp",
         "x": 769,
         "y": 1192,
         "width": 252,
@@ -1196,7 +1196,7 @@
         "r": "-18deg"
       },
       {
-        "src": "assets/burst/robusta/ray-11.webp",
+        "src": "ASSETS/chipca/robusta/ray-11.webp",
         "x": 644,
         "y": 1237,
         "width": 180,
@@ -1207,7 +1207,7 @@
         "r": "18deg"
       },
       {
-        "src": "assets/burst/robusta/ray-12.webp",
+        "src": "ASSETS/chipca/robusta/ray-12.webp",
         "x": 452,
         "y": 1195,
         "width": 220,
@@ -1218,7 +1218,7 @@
         "r": "-18deg"
       },
       {
-        "src": "assets/burst/robusta/ray-13.webp",
+        "src": "ASSETS/chipca/robusta/ray-13.webp",
         "x": 213,
         "y": 1165,
         "width": 357,
@@ -1229,7 +1229,7 @@
         "r": "18deg"
       },
       {
-        "src": "assets/burst/robusta/ray-14.webp",
+        "src": "ASSETS/chipca/robusta/ray-14.webp",
         "x": 139,
         "y": 1106,
         "width": 344,
@@ -1240,7 +1240,7 @@
         "r": "-18deg"
       },
       {
-        "src": "assets/burst/robusta/ray-15.webp",
+        "src": "ASSETS/chipca/robusta/ray-15.webp",
         "x": 116,
         "y": 1049,
         "width": 317,
@@ -1251,7 +1251,7 @@
         "r": "18deg"
       },
       {
-        "src": "assets/burst/robusta/ray-16.webp",
+        "src": "ASSETS/chipca/robusta/ray-16.webp",
         "x": 0,
         "y": 936,
         "width": 385,
@@ -1262,7 +1262,7 @@
         "r": "-18deg"
       },
       {
-        "src": "assets/burst/robusta/ray-17.webp",
+        "src": "ASSETS/chipca/robusta/ray-17.webp",
         "x": 37,
         "y": 801,
         "width": 361,
@@ -1273,7 +1273,7 @@
         "r": "18deg"
       },
       {
-        "src": "assets/burst/robusta/ray-18.webp",
+        "src": "ASSETS/chipca/robusta/ray-18.webp",
         "x": 0,
         "y": 551,
         "width": 400,
@@ -1284,7 +1284,7 @@
         "r": "-18deg"
       },
       {
-        "src": "assets/burst/robusta/ray-19.webp",
+        "src": "ASSETS/chipca/robusta/ray-19.webp",
         "x": 135,
         "y": 394,
         "width": 336,
@@ -1295,7 +1295,7 @@
         "r": "18deg"
       },
       {
-        "src": "assets/burst/robusta/ray-20.webp",
+        "src": "ASSETS/chipca/robusta/ray-20.webp",
         "x": 271,
         "y": 396,
         "width": 262,
@@ -1306,7 +1306,7 @@
         "r": "-18deg"
       },
       {
-        "src": "assets/burst/robusta/ray-21.webp",
+        "src": "ASSETS/chipca/robusta/ray-21.webp",
         "x": 416,
         "y": 271,
         "width": 224,
@@ -1317,7 +1317,7 @@
         "r": "18deg"
       },
       {
-        "src": "assets/burst/robusta/ray-22.webp",
+        "src": "ASSETS/chipca/robusta/ray-22.webp",
         "x": 588,
         "y": 248,
         "width": 152,
@@ -1329,4 +1329,4 @@
       }
     ]
   }
-]
+];
