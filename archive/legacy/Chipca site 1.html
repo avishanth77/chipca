@@ -1757,7 +1757,7 @@ button{font:inherit;color:inherit;cursor:pointer}
   <div class="showcase-container">
     <div class="showcase-visual">
       <div class="showcase-img-wrap">
-        <img id="showcase-img" class="showcase-img" src="classic.png" alt="Classic Chips" draggable="false">
+        <img id="showcase-img" class="showcase-img" src="../../assets/images/products/classic.png" alt="Classic Chips" draggable="false">
         <div class="showcase-floor-shadow" id="showcase-shadow" aria-hidden="true"></div>
       </div>
     </div>
@@ -1890,8 +1890,8 @@ button{font:inherit;color:inherit;cursor:pointer}
       <div class="footer-col footer-col-brand">
         <a href="#hero" class="footer-logo-link" aria-label="Chipca Home">
           <picture>
-            <source srcset="chipca_logo_white.webp" type="image/webp">
-            <img src="chipca_logo_white.png" alt="Chipca: The Good Bite" class="footer-brand-img" width="185" height="125" loading="lazy">
+            <source srcset="../../assets/images/branding/chipca_logo_white.webp" type="image/webp">
+            <img src="../../assets/images/branding/chipca_logo_white.png" alt="Chipca: The Good Bite" class="footer-brand-img" width="185" height="125" loading="lazy">
           </picture>
         </a>
         <p class="footer-tagline">Crunchy, flavourful chips inspired by the spirit of Kerala.</p>
@@ -2206,7 +2206,7 @@ const PRODUCTS = [
     title: 'CLASSIC',
     subtitle: 'chips',
     titleColor: '#b38363',
-    img: 'classic.png',
+    img: '../../assets/images/products/classic.png',
     desc: 'Golden, crispy, and irresistibly delicious! Chipca Classic Banana Chips bring you the authentic taste of Kerala in every bite. Made from carefully selected raw bananas and perfectly fried to achieve that signature crunch, every slice delivers a delightful blend of traditional flavour and freshness.',
     badges: [
       { icon: 'premium_bananas.png', label: 'Premium Bananas' },
@@ -2218,7 +2218,7 @@ const PRODUCTS = [
     title: 'ROBUSTA',
     subtitle: 'chips',
     titleColor: '#5c7255',
-    img: 'robusta.png',
+    img: '../../assets/images/products/robusta.png',
     desc: 'Naturally subtle, light, and delicately crisp! Made from premium ripened Robusta bananas, these chips deliver a gentle tropical sweetness balanced with an airy crunch. Fried to wholesome perfection in pure coconut oil for an everyday guilt-free snack.',
     badges: [
       { icon: 'premium_bananas.png', label: 'Farm-Fresh Robusta' },
@@ -2230,7 +2230,7 @@ const PRODUCTS = [
     title: 'TARO',
     subtitle: 'chips',
     titleColor: '#25796f',
-    img: 'taro.png',
+    img: '../../assets/images/products/taro.png',
     desc: 'Earthy, rustic, and exceptionally crunchy! Sourced from tender, organically nurtured root farms, our Taro Chips are sliced wafer-thin and sprinkled with pure sea salt to let the deep, nutty root flavors shine through. A rare heritage snacking crunch.',
     badges: [
       { icon: 'handpicked_taro_roots.png', label: 'Handpicked Taro Roots' },
@@ -2242,7 +2242,7 @@ const PRODUCTS = [
     title: 'MASALA',
     subtitle: 'chips',
     titleColor: '#b84724',
-    img: 'masala.png',
+    img: '../../assets/images/products/masala.png',
     desc: 'Bold, fiery, and bursting with coastal spices! Our Classic banana chips tossed generously in an authentic Malabar blend of roasted red chillies, black pepper, cumin, and tangy spices. Every crunchy bite delivers an explosive burst of savory heat.',
     badges: [
       { icon: 'malabar_spices.png', label: 'Malabar Spices' },
@@ -2254,7 +2254,7 @@ const PRODUCTS = [
     title: 'SINGLE STICK',
     subtitle: 'sticks',
     titleColor: '#b06d15',
-    img: 'stick.png',
+    img: '../../assets/images/products/stick.png',
     desc: 'Slender, super-crunchy, and wildly addictive! Crafted in the time-honored Kerala tradition, hearty raw bananas are cut into slender artisanal matchsticks and slow-crisped for an intense crunch. The ultimate companion for your afternoon tea or coffee.',
     badges: [
       { icon: 'artisanal_matchstick_cut.png', label: 'Artisanal Matchstick Cut' },
@@ -2310,7 +2310,7 @@ function renderShowcase(idx, anim = true){
     badges.innerHTML = p.badges.map(b => {
       const isImg = b.icon && b.icon.endsWith('.png');
       const iconHtml = isImg
-        ? `<img src="chips_benefit_icons/${b.icon}" alt="${b.label}" loading="lazy">`
+        ? `<img src="../../assets/icons/${b.icon}" alt="${b.label}" loading="lazy">`
         : (ICONS[b.icon] || '');
       return `
         <div class="showcase-badge">
@@ -2417,7 +2417,7 @@ const SHOP_ITEMS = [
       '250g': { price: 149, label: '250g pack' },
       '500g': { price: 299, label: '500g pack' }
     },
-    img: 'classic.png',
+    img: '../../assets/images/products/classic.png',
     color: '#4A2C18'
   },
   {
@@ -2430,7 +2430,7 @@ const SHOP_ITEMS = [
       '250g': { price: 249, label: '250g pack' },
       '500g': { price: 449, label: '500g pack' }
     },
-    img: 'robusta.png',
+    img: '../../assets/images/products/robusta.png',
     color: '#6F8168'
   },
   {
@@ -2443,7 +2443,7 @@ const SHOP_ITEMS = [
       '250g': { price: 349, label: '250g pack' },
       '500g': { price: 599, label: '500g pack' }
     },
-    img: 'taro.png',
+    img: '../../assets/images/products/taro.png',
     color: '#0B5A52'
   },
   {
@@ -2456,7 +2456,7 @@ const SHOP_ITEMS = [
       '250g': { price: 249, label: '250g pack' },
       '500g': { price: 399, label: '500g pack' }
     },
-    img: 'masala.png',
+    img: '../../assets/images/products/masala.png',
     color: '#9E3A1F'
   },
   {
@@ -2469,7 +2469,7 @@ const SHOP_ITEMS = [
       '250g': { price: 175, label: '250g pack' },
       '500g': { price: 340, label: '500g pack' }
     },
-    img: 'stick.png',
+    img: '../../assets/images/products/stick.png',
     color: '#C27B1C'
   }
 ];
